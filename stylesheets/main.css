@@ -1,0 +1,12 @@
+.jumbotron {
+background-image: url('../Picture.jpg');
+
+height: 100%;
+width: 100%;
+background-size: cover;
+}
+
+.jumbotron .container {
+position: relative;
+top:100px;
+}
