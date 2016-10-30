@@ -23,44 +23,48 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[   1722627,      29082]
-NotebookOptionsPosition[   1722999,      29071]
-NotebookOutlinePosition[   1723534,      29094]
-CellTagsIndexPosition[   1723491,      29091]
+NotebookDataLength[   1722757,      29088]
+NotebookOptionsPosition[   1723091,      29075]
+NotebookOutlinePosition[   1723628,      29098]
+CellTagsIndexPosition[   1723585,      29095]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["Random Motion of Tethered Beads", "Title", "PluginEmbeddedContent"],
+
 Cell[TextData[{
- "Tethered Bead Motion: The movie shows two 1.2 \[Mu]m-diameter beads, each \
-of which is tethered to the surface of a microscope coverslide by a 2.2 \
-kilobase segment of double-stranded DNA. Each bead undergoes Brownian motion \
-as a result of its collisions with molecules of the surrounding fluid. The \
-location of each bead's center is tracked by ",
- StyleBox["Mathematica.",
+ "The movie shows two 1.2 \[Mu]m-diameter beads, eachof which is tethered to \
+the surface of a microscope coverslide by a 2.2 kilobase segment of \
+double-stranded DNA. Each bead undergoes Brownian motion as a result of its \
+collisions with molecules of the surrounding fluid. The location of each bead\
+\[CloseCurlyQuote]s center is tracked by ",
+ StyleBox["Mathematica",
   FontSlant->"Italic"],
- " The red and blue tracks show the previous 32 positions of each bead. The \
-movie was acquired at a frame rate of 13.7 frames per second (fps), which is \
-the same as the video playback rate in playback mode, ",
+ "\n \nThe red and blue tracks show the previous 32 positions of each bead. \
+The movie was acquired at a frame rate of 13.7 frames per second (fps), which \
+is the same as the video playback rate in playback mode, ",
  StyleBox["i.e.",
   FontSlant->"Italic"],
  " the movie is played back in real time. There are 11.75 pixels per \[Mu]m. \
-\n\nThe analysis shows a statistical analysis of the beads' positions. The \
-top left panel plots bead 1's ",
+\n\nThe analysis shows a statistical analysis of the beads\[CloseCurlyQuote] \
+positions. The top left panel plots bead 1\[CloseCurlyQuote]s ",
  StyleBox["x",
   FontSlant->"Italic"],
- " (red line) and ",
+ " and ",
  StyleBox["y",
   FontSlant->"Italic"],
- " (magenta line) coordinate and bead 2's ",
+ " coordinates (magenta line) and bead 2\[CloseCurlyQuote]s ",
  StyleBox["x",
   FontSlant->"Italic"],
- " (blue line) and ",
- StyleBox["y ",
+ " and ",
+ StyleBox["y",
   FontSlant->"Italic"],
- "(cyan line) coordinate. The two beads are identical and are attached to the \
-coverslide via identical DNA. Therefore, we expect each bead's Brownian \
-motion to be the same in the ",
+ " coordinates (cyan line). \n\nThe two beads are identical and are attached \
+to the coverslide via identical DNA. Therefore, we expect each bead\
+\[CloseCurlyQuote]s Brownian motion to be the same in the ",
  StyleBox["x",
   FontSlant->"Italic"],
  " and ",
@@ -73,7 +77,7 @@ follows that we can average together measurements along ",
  " and ",
  StyleBox["y",
   FontSlant->"Italic"],
- " and for both beads. \n\nThe top right panel plots the mean square \
+ " and for both beads..\n\nThe top right panel plots the mean square \
 displacement (MSD) along an axis for times separated by 1, 2, 3, and 4 \
 frames, determined using 4 displacements from each frame (2 beads each with \
 ",
@@ -87,22 +91,21 @@ linearly versus time, albeit with a zero-time intercept. \n\nThe remaining \
 panels show histograms of the displacement distributions at times of 1 \
 (middle left), 2 (middle right), 3 (bottom left), and 4 frames (bottom right) \
 in comparison to Gaussians with variance equal to the respective MSDs shown \
-in the top right panel. How many frames and which frames contribute to the \
-histograms can be controlled by the sliders.\n\nConsider the paths traced out \
-by both beads. Do they seem to have equal random motions in both x and y \
-directions? \nIn the analysis view, what happens when the frame window \
-changes? How do the corresponding graphs change? Why is this?\nIntuitively \
-explain why the lower four graphs in the analysis section \
-\[OpenCurlyDoubleQuote]flatten out\[CloseCurlyDoubleQuote] as you go from the \
-first to the fourth. Relate this to the top right graph. \n"
-}], "ManipulateCaption", "PluginEmbeddedContent",
- CellID->846551732],
+in the top right panel. The sliders can control how many frames we use and \
+which frames. \n\nConsider the paths traced out by both beads. Do they seem \
+to have equal random motions in both x and y directions? \nIn the analysis \
+view, what happens when the frame window changes? How do the corresponding \
+graphs change? Why is this?\nIntuitively explain why the lower four graphs in \
+the analysis section \[OpenCurlyDoubleQuote]flatten out\
+\[CloseCurlyDoubleQuote] as you go from the first to the fourth. Relate this \
+to the top right graph.\n"
+}], "Text", "PluginEmbeddedContent"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i$$ = 190, $CellContext`sframe$$ = 
-    126, $CellContext`window$$ = 254, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i$$ = 60, $CellContext`sframe$$ = 
+    60, $CellContext`window$$ = 254, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -142,7 +145,7 @@ $CellContext`NFRAMES]], 1}, {{
            Dynamic[$CellContext`window$$], FontSize -> 14, FontFamily -> 
            "Helvetica"]}}, Alignment -> Left]], 
       Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-    450., {261., 266.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    576., {164., 168.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = False, $CellContext`i$255775$$ = 
     0, $CellContext`sframe$255776$$ = 0, $CellContext`window$255777$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -318,7 +321,7 @@ $CellContext`NFRAMES]], 1, ControlType -> Animator,
             Dynamic[$CellContext`window$$], FontSize -> 14, FontFamily -> 
             "Helvetica"]}}, Alignment -> Left]}, "Options" :> {}, 
       "DefaultOptions" :> {ControllerLinking -> True}],
-     ImageSizeCache->{495., {348., 353.}},
+     ImageSizeCache->{621., {250., 255.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -29068,10 +29071,11 @@ Rj+SvxO4x7v+0PH/AFxt/Dw=
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output", "PluginEmbeddedContent",
  CellID->942454386]
+}, Open  ]]
 },
-WindowSize->{804.1833333333333, 996.09},
+WindowSize->{801.1333333333333, 1103.21},
 Visible->True,
-AuthoredSize->{804, 996},
+AuthoredSize->{801, 1103},
 ScrollingOptions->{"HorizontalScrollRange"->Fit,
 "VerticalScrollRange"->Fit},
 ShowCellBracket->False,
@@ -29093,14 +29097,16 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1464, 33, 2958, 65, 285, "ManipulateCaption",
- CellID->846551732],
-Cell[4425, 100, 1718570, 28969, 703, "Output",
+Cell[CellGroupData[{
+Cell[1486, 35, 73, 0, 52, "Title"],
+Cell[1562, 37, 2942, 64, 529, "Text"],
+Cell[4507, 103, 1718568, 28969, 507, "Output",
  CellID->942454386]
+}, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature 6x0PJMbE@SrHcAKFx5OU@mDZ *)
+(* NotebookSignature OwprYPsYl#RGIB1qPFFdkg4R *)
