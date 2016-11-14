@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[     17092,        378]
-NotebookOptionsPosition[     17443,        366]
-NotebookOutlinePosition[     17989,        389]
-CellTagsIndexPosition[     17946,        386]
+NotebookDataLength[     17075,        377]
+NotebookOptionsPosition[     17426,        365]
+NotebookOutlinePosition[     17972,        388]
+CellTagsIndexPosition[     17929,        385]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,9 +69,9 @@ Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`dist$$ = False, $CellContext`means$$ = 
-    False, $CellContext`n$$ = 166, $CellContext`nreps$$ = 
-    14, $CellContext`p$$ = 0.5, $CellContext`square$$ = 
-    False, $CellContext`window$$ = 3, Typeset`show$$ = True, 
+    False, $CellContext`n$$ = 251, $CellContext`nreps$$ = 
+    16, $CellContext`p$$ = 0.5, $CellContext`square$$ = 
+    False, $CellContext`window$$ = 4, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -132,23 +132,23 @@ Cell[BoxData[
         Alignment -> Left]], Manipulate`Dump`ThisIsNotAControl}}, 
     Typeset`size$$ = {600., {148., 152.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`dist$412666$$ = False, $CellContext`means$412667$$ = 
-    False, $CellContext`square$412668$$ = False, $CellContext`p$412669$$ = 
-    0, $CellContext`nreps$412670$$ = 0, $CellContext`n$412671$$ = 
-    0, $CellContext`window$412672$$ = 0}, 
+    True, $CellContext`dist$1869169$$ = False, $CellContext`means$1869170$$ = 
+    False, $CellContext`square$1869171$$ = False, $CellContext`p$1869172$$ = 
+    0, $CellContext`nreps$1869173$$ = 0, $CellContext`n$1869174$$ = 
+    0, $CellContext`window$1869175$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
       "Variables" :> {$CellContext`dist$$ = False, $CellContext`means$$ = 
         False, $CellContext`n$$ = 128, $CellContext`nreps$$ = 
         3, $CellContext`p$$ = 0.5, $CellContext`square$$ = 
         False, $CellContext`window$$ = 2}, "ControllerVariables" :> {
-        Hold[$CellContext`dist$$, $CellContext`dist$412666$$, False], 
-        Hold[$CellContext`means$$, $CellContext`means$412667$$, False], 
-        Hold[$CellContext`square$$, $CellContext`square$412668$$, False], 
-        Hold[$CellContext`p$$, $CellContext`p$412669$$, 0], 
-        Hold[$CellContext`nreps$$, $CellContext`nreps$412670$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$412671$$, 0], 
-        Hold[$CellContext`window$$, $CellContext`window$412672$$, 0]}, 
+        Hold[$CellContext`dist$$, $CellContext`dist$1869169$$, False], 
+        Hold[$CellContext`means$$, $CellContext`means$1869170$$, False], 
+        Hold[$CellContext`square$$, $CellContext`square$1869171$$, False], 
+        Hold[$CellContext`p$$, $CellContext`p$1869172$$, 0], 
+        Hold[$CellContext`nreps$$, $CellContext`nreps$1869173$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$1869174$$, 0], 
+        Hold[$CellContext`window$$, $CellContext`window$1869175$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -175,12 +175,11 @@ $CellContext`means1)^2, {$CellContext`k,
           False; $CellContext`square$$ = False; If[
            Or[$CellContext`p$$ == 0, $CellContext`p$$ == 1], 
            Show[
-            
-            Plot[(2 (
-               Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
-                    1) $CellContext`n$$)^2)/2)/(4 10^(-9))]/
-               Sqrt[(((2 Pi) 4) $CellContext`n$$) 
-                10^(-9)])) $CellContext`nreps$$, {$CellContext`x, (
+            Plot[
+            2 (Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
+                    1) $CellContext`n$$)^2)/2)/(4 10^(-9))]/Sqrt[
+              2 Pi 4 $CellContext`n$$ 
+               10^(-9)]) $CellContext`nreps$$, {$CellContext`x, (
                 2 $CellContext`p$$ - 1) $CellContext`n$$ - 3 
               Sqrt[$CellContext`n$$], (2 $CellContext`p$$ - 
                 1) $CellContext`n$$ + 3 Sqrt[$CellContext`n$$]}, 
@@ -197,14 +196,13 @@ $CellContext`means1)^2, {$CellContext`k,
              Part[$CellContext`randomWalk, 
               Span[1, $CellContext`nreps$$], $CellContext`n$$], {2}]], 
            Show[
-            
-            Plot[(2 (
-               Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
-                    1) $CellContext`n$$)^2)/
-                  2)/(((4 $CellContext`p$$) (
-                   1 - $CellContext`p$$)) $CellContext`n$$)]/
-               Sqrt[((((2 Pi) 4) $CellContext`n$$) $CellContext`p$$) (
-                 1 - $CellContext`p$$)])) $CellContext`nreps$$, \
+            Plot[
+            2 (Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
+                    1) $CellContext`n$$)^2)/2)/(
+                4 $CellContext`p$$ (1 - $CellContext`p$$) $CellContext`n$$)]/
+              Sqrt[2 Pi 
+               4 $CellContext`n$$ $CellContext`p$$ (
+                1 - $CellContext`p$$)]) $CellContext`nreps$$, \
 {$CellContext`x, (2 $CellContext`p$$ - 1) $CellContext`n$$ - 3 
               Sqrt[$CellContext`n$$], (2 $CellContext`p$$ - 
                 1) $CellContext`n$$ + 3 Sqrt[$CellContext`n$$]}, 
@@ -238,9 +236,9 @@ $CellContext`dist$$ = False; Show[
                Style[
                "Calculated Value", Black, FontSize -> 14, FontFamily -> 
                 "Helvetica"]}, Below]], 
-           
-           Plot[((4 $CellContext`p$$) (
-              1 - $CellContext`p$$)) $CellContext`t, {$CellContext`t, 
+           Plot[
+           4 $CellContext`p$$ (
+             1 - $CellContext`p$$) $CellContext`t, {$CellContext`t, 
              0, $CellContext`n$$}, PlotStyle -> {Cyan, Thick}, PlotLegends -> 
             Placed[{
                Style[
@@ -348,9 +346,10 @@ $CellContext`dist$$ = False; Show[
          Alignment -> Left]}, 
       "Options" :> {
        ContinuousAction -> False, 
-        TrackedSymbols -> {$CellContext`square$$, $CellContext`dist$$, \
-$CellContext`nreps$$, $CellContext`n$$, 92, $CellContext`means$$}, 
-        SynchronousUpdating -> False}, "DefaultOptions" :> {}],
+        TrackedSymbols :> {$CellContext`square$$, $CellContext`dist$$, \
+$CellContext`nreps$$, $CellContext`n$$, $CellContext`seed, \
+$CellContext`means$$, $CellContext`window$$}, SynchronousUpdating -> False}, 
+      "DefaultOptions" :> {}],
      ImageSizeCache->{645., {287., 292.}},
      SingleEvaluation->True],
     Deinitialization:>None,
@@ -391,7 +390,7 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[1486, 35, 61, 0, 52, "Title"],
 Cell[1550, 37, 1753, 28, 284, "Text"],
-Cell[3306, 67, 14121, 296, 581, "Input"]
+Cell[3306, 67, 14104, 295, 581, "Input"]
 }, Open  ]]
 }
 ]
@@ -399,4 +398,4 @@ Cell[3306, 67, 14121, 296, 581, "Input"]
 
 (* End of internal cache information *)
 
-(* NotebookSignature kwTwdACVid8NrCwBhPGnJH1H *)
+(* NotebookSignature Wx00RLyEBRsX3DKBnQstEHHe *)
