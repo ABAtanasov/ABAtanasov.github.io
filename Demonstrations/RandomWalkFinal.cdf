@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[     17093,        377]
-NotebookOptionsPosition[     17444,        365]
-NotebookOutlinePosition[     17990,        388]
-CellTagsIndexPosition[     17947,        385]
+NotebookDataLength[     17405,        384]
+NotebookOptionsPosition[     17732,        371]
+NotebookOutlinePosition[     18266,        394]
+CellTagsIndexPosition[     18223,        391]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -62,8 +62,12 @@ comes closer to being a flat line as we increase the number of sample paths. \
  "\[CloseCurlyDoubleQuote] demonstrates how the average ",
  StyleBox["squared",
   FontSlant->"Italic"],
- " distance away from zero increases linearly. "
+ " distance away from zero increases linearly. Clicking show means will \
+explicitly show the actual mean square deviation growing linearly (in black) \
+vs the theoretically expected (in cyan)."
 }], "Text", "PluginEmbeddedContent"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input", "PluginEmbeddedContent"],
 
 Cell[BoxData[
  TagBox[
@@ -175,11 +179,12 @@ $CellContext`means1)^2, {$CellContext`k,
           False; $CellContext`square$$ = False; If[
            Or[$CellContext`p$$ == 0, $CellContext`p$$ == 1], 
            Show[
-            Plot[
-            2 (Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
-                    1) $CellContext`n$$)^2)/2)/(4 10^(-9))]/Sqrt[
-              2 Pi 4 $CellContext`n$$ 
-               10^(-9)]) $CellContext`nreps$$, {$CellContext`x, (
+            
+            Plot[(2 (
+               Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
+                    1) $CellContext`n$$)^2)/2)/(4 10^(-9))]/
+               Sqrt[(((2 Pi) 4) $CellContext`n$$) 
+                10^(-9)])) $CellContext`nreps$$, {$CellContext`x, (
                 2 $CellContext`p$$ - 1) $CellContext`n$$ - 3 
               Sqrt[$CellContext`n$$], (2 $CellContext`p$$ - 
                 1) $CellContext`n$$ + 3 Sqrt[$CellContext`n$$]}, 
@@ -196,13 +201,14 @@ $CellContext`means1)^2, {$CellContext`k,
              Part[$CellContext`randomWalk, 
               Span[1, $CellContext`nreps$$], $CellContext`n$$], {2}]], 
            Show[
-            Plot[
-            2 (Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
-                    1) $CellContext`n$$)^2)/2)/(
-                4 $CellContext`p$$ (1 - $CellContext`p$$) $CellContext`n$$)]/
-              Sqrt[2 Pi 
-               4 $CellContext`n$$ $CellContext`p$$ (
-                1 - $CellContext`p$$)]) $CellContext`nreps$$, \
+            
+            Plot[(2 (
+               Exp[((-($CellContext`x - (2 $CellContext`p$$ - 
+                    1) $CellContext`n$$)^2)/
+                  2)/(((4 $CellContext`p$$) (
+                   1 - $CellContext`p$$)) $CellContext`n$$)]/
+               Sqrt[((((2 Pi) 4) $CellContext`n$$) $CellContext`p$$) (
+                 1 - $CellContext`p$$)])) $CellContext`nreps$$, \
 {$CellContext`x, (2 $CellContext`p$$ - 1) $CellContext`n$$ - 3 
               Sqrt[$CellContext`n$$], (2 $CellContext`p$$ - 
                 1) $CellContext`n$$ + 3 Sqrt[$CellContext`n$$]}, 
@@ -236,9 +242,9 @@ $CellContext`dist$$ = False; Show[
                Style[
                "Calculated Value", Black, FontSize -> 14, FontFamily -> 
                 "Helvetica"]}, Below]], 
-           Plot[
-           4 $CellContext`p$$ (
-             1 - $CellContext`p$$) $CellContext`t, {$CellContext`t, 
+           
+           Plot[((4 $CellContext`p$$) (
+              1 - $CellContext`p$$)) $CellContext`t, {$CellContext`t, 
              0, $CellContext`n$$}, PlotStyle -> {Cyan, Thick}, PlotLegends -> 
             Placed[{
                Style[
@@ -363,9 +369,9 @@ $CellContext`means$$, $CellContext`window$$}, SynchronousUpdating -> False},
   Manipulate`InterpretManipulate[1]]], "Input", "PluginEmbeddedContent"]
 }, Open  ]]
 },
-WindowSize->{937.3666666666667, 934.4300000000001},
+WindowSize->{939.4, 984.4300000000001},
 Visible->True,
-AuthoredSize->{937, 934},
+AuthoredSize->{939, 984},
 ScrollingOptions->{"HorizontalScrollRange"->Fit,
 "VerticalScrollRange"->Fit},
 ShowCellBracket->False,
@@ -389,8 +395,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[1486, 35, 61, 0, 52, "Title"],
-Cell[1550, 37, 1753, 28, 284, "Text"],
-Cell[3306, 67, 14122, 295, 581, "Input"]
+Cell[1550, 37, 1899, 30, 303, "Text"],
+Cell[3452, 69, 70, 0, 31, "Input"],
+Cell[3525, 71, 14191, 297, 581, "Input"]
 }, Open  ]]
 }
 ]
@@ -398,4 +405,4 @@ Cell[3306, 67, 14122, 295, 581, "Input"]
 
 (* End of internal cache information *)
 
-(* NotebookSignature 7wTZSOjL0A@XeC1CJXXahvlK *)
+(* NotebookSignature expR#9VXBpHSWDK37b2dBNS@ *)
