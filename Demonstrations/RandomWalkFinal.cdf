@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[     17075,        377]
-NotebookOptionsPosition[     17426,        365]
-NotebookOutlinePosition[     17972,        388]
-CellTagsIndexPosition[     17929,        385]
+NotebookDataLength[     17093,        377]
+NotebookOptionsPosition[     17444,        365]
+NotebookOutlinePosition[     17990,        388]
+CellTagsIndexPosition[     17947,        385]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,9 +69,9 @@ Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`dist$$ = False, $CellContext`means$$ = 
-    False, $CellContext`n$$ = 251, $CellContext`nreps$$ = 
-    16, $CellContext`p$$ = 0.5, $CellContext`square$$ = 
-    False, $CellContext`window$$ = 4, Typeset`show$$ = True, 
+    False, $CellContext`n$$ = 200, $CellContext`nreps$$ = 
+    20, $CellContext`p$$ = 0.5, $CellContext`square$$ = 
+    False, $CellContext`window$$ = 3, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -132,23 +132,23 @@ Cell[BoxData[
         Alignment -> Left]], Manipulate`Dump`ThisIsNotAControl}}, 
     Typeset`size$$ = {600., {148., 152.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`dist$1869169$$ = False, $CellContext`means$1869170$$ = 
-    False, $CellContext`square$1869171$$ = False, $CellContext`p$1869172$$ = 
-    0, $CellContext`nreps$1869173$$ = 0, $CellContext`n$1869174$$ = 
-    0, $CellContext`window$1869175$$ = 0}, 
+    True, $CellContext`dist$1874576$$ = False, $CellContext`means$1874577$$ = 
+    False, $CellContext`square$1874578$$ = False, $CellContext`p$1874579$$ = 
+    0, $CellContext`nreps$1874580$$ = 0, $CellContext`n$1874581$$ = 
+    0, $CellContext`window$1874582$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
       "Variables" :> {$CellContext`dist$$ = False, $CellContext`means$$ = 
         False, $CellContext`n$$ = 128, $CellContext`nreps$$ = 
         3, $CellContext`p$$ = 0.5, $CellContext`square$$ = 
         False, $CellContext`window$$ = 2}, "ControllerVariables" :> {
-        Hold[$CellContext`dist$$, $CellContext`dist$1869169$$, False], 
-        Hold[$CellContext`means$$, $CellContext`means$1869170$$, False], 
-        Hold[$CellContext`square$$, $CellContext`square$1869171$$, False], 
-        Hold[$CellContext`p$$, $CellContext`p$1869172$$, 0], 
-        Hold[$CellContext`nreps$$, $CellContext`nreps$1869173$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$1869174$$, 0], 
-        Hold[$CellContext`window$$, $CellContext`window$1869175$$, 0]}, 
+        Hold[$CellContext`dist$$, $CellContext`dist$1874576$$, False], 
+        Hold[$CellContext`means$$, $CellContext`means$1874577$$, False], 
+        Hold[$CellContext`square$$, $CellContext`square$1874578$$, False], 
+        Hold[$CellContext`p$$, $CellContext`p$1874579$$, 0], 
+        Hold[$CellContext`nreps$$, $CellContext`nreps$1874580$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$1874581$$, 0], 
+        Hold[$CellContext`window$$, $CellContext`window$1874582$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -347,7 +347,7 @@ $CellContext`dist$$ = False; Show[
       "Options" :> {
        ContinuousAction -> False, 
         TrackedSymbols :> {$CellContext`square$$, $CellContext`dist$$, \
-$CellContext`nreps$$, $CellContext`n$$, $CellContext`seed, \
+$CellContext`nreps$$, $CellContext`n$$, $CellContext`p$$, $CellContext`seed, \
 $CellContext`means$$, $CellContext`window$$}, SynchronousUpdating -> False}, 
       "DefaultOptions" :> {}],
      ImageSizeCache->{645., {287., 292.}},
@@ -390,7 +390,7 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[1486, 35, 61, 0, 52, "Title"],
 Cell[1550, 37, 1753, 28, 284, "Text"],
-Cell[3306, 67, 14104, 295, 581, "Input"]
+Cell[3306, 67, 14122, 295, 581, "Input"]
 }, Open  ]]
 }
 ]
@@ -398,4 +398,4 @@ Cell[3306, 67, 14104, 295, 581, "Input"]
 
 (* End of internal cache information *)
 
-(* NotebookSignature Wx00RLyEBRsX3DKBnQstEHHe *)
+(* NotebookSignature 7wTZSOjL0A@XeC1CJXXahvlK *)
