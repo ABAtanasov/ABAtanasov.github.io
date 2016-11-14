@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[    304871,       5085]
-NotebookOptionsPosition[    305231,       5073]
-NotebookOutlinePosition[    305766,       5096]
-CellTagsIndexPosition[    305723,       5093]
+NotebookDataLength[    305970,       5118]
+NotebookOptionsPosition[    306218,       5102]
+NotebookOutlinePosition[    306755,       5125]
+CellTagsIndexPosition[    306712,       5122]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -64,20 +64,48 @@ genes, ",
   FontSlant->"Italic"],
  "/2 diploid organisms (like humans). The starting and ending time step \
 specify a range over which time evolution happens. The fitness determines the \
-likeliness that the holders of gene A will survive and reproduce to the next \
-step. The mutation rate determines the rate at which mutations become fixed \
-in a population and is independent of ",
+likeliness that the holders of allele A will survive and reproduce to the \
+next step. The mutation rate determines the rate at which mutations become \
+fixed in a population and is independent of ",
  StyleBox["N",
   FontSlant->"Italic"],
  ".\n"
 }], "Text", "PluginEmbeddedContent"],
 
+Cell[CellGroupData[{
+
+Cell["Questions", "Section", "PluginEmbeddedContent"],
+
+Cell["\<\
+Play around with the module to get a feel for the controls.
+
+Now set the starting time step to 1, and let the ending time step be large \
+(>10,000).
+
+Increase the fitness past 1.0, what do you see happening?
+
+Now set the fitness back to 1.0 (you can set the fitness exactly by clicking \
+the \[OpenCurlyQuote]+\[OpenCurlyQuote] button to the right of the slider and \
+manually entering the number you want.
+Increase the mutation rate, what do you see happening?
+
+Now look at what happens with low fitness/low mutation rate. Compare these \
+settings to the previous.
+
+How important would you say is the role of mutation rate?
+
+What happens to the number of gene cycles (different colors) when we decrease \
+gene population? Why might this happen? What do you expect about the \
+probability of a given allele to dominate in smaller populations?
+\
+\>", "Text", "PluginEmbeddedContent"],
+
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`fit$$ = 1.304, $CellContext`nend$$ = 
-    15000, $CellContext`ngenes$$ = 32, $CellContext`nstart$$ = 
-    500, $CellContext`rate$$ = 0.00251, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`fit$$ = 1.082, $CellContext`nend$$ = 
+    17500, $CellContext`ngenes$$ = 26, $CellContext`nstart$$ = 
+    500, $CellContext`rate$$ = 0.00103, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -5070,10 +5098,11 @@ YQ3U
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Input", "PluginEmbeddedContent"]
 }, Open  ]]
+}, Open  ]]
 },
-WindowSize->{801.1333333333333, 965.17},
+WindowSize->{801.1333333333333, 1318.17},
 Visible->True,
-AuthoredSize->{801, 965},
+AuthoredSize->{801, 1318},
 ScrollingOptions->{"HorizontalScrollRange"->Fit,
 "VerticalScrollRange"->Fit},
 ShowCellBracket->False,
@@ -5097,8 +5126,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[1486, 35, 90, 0, 52, "Title"],
-Cell[1579, 37, 2064, 35, 377, "Text"],
-Cell[3646, 74, 301569, 4996, 539, "Input"]
+Cell[1579, 37, 2066, 35, 377, "Text"],
+Cell[CellGroupData[{
+Cell[3670, 76, 53, 0, 38, "Section"],
+Cell[3726, 78, 892, 22, 320, "Text"],
+Cell[4621, 102, 301569, 4996, 539, "Input"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
@@ -5106,4 +5139,4 @@ Cell[3646, 74, 301569, 4996, 539, "Input"]
 
 (* End of internal cache information *)
 
-(* NotebookSignature oxDxnBb@vrdapDKWVAI5MTbu *)
+(* NotebookSignature bvD9xy9zIDKE1A1uitTAzLCm *)
