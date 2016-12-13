@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[   1722757,      29088]
-NotebookOptionsPosition[   1723091,      29075]
-NotebookOutlinePosition[   1723628,      29098]
-CellTagsIndexPosition[   1723585,      29095]
+NotebookDataLength[   1722770,      29088]
+NotebookOptionsPosition[   1723092,      29075]
+NotebookOutlinePosition[   1723641,      29098]
+CellTagsIndexPosition[   1723598,      29095]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -104,8 +104,8 @@ to the top right graph.\n"
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i$$ = 60, $CellContext`sframe$$ = 
-    60, $CellContext`window$$ = 254, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i$$ = 164, $CellContext`sframe$$ = 
+    62, $CellContext`window$$ = 254, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -145,7 +145,7 @@ $CellContext`NFRAMES]], 1}, {{
            Dynamic[$CellContext`window$$], FontSize -> 14, FontFamily -> 
            "Helvetica"]}}, Alignment -> Left]], 
       Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-    576., {164., 168.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    450., {261., 266.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = False, $CellContext`i$255775$$ = 
     0, $CellContext`sframe$255776$$ = 0, $CellContext`window$255777$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -321,7 +321,7 @@ $CellContext`NFRAMES]], 1, ControlType -> Animator,
             Dynamic[$CellContext`window$$], FontSize -> 14, FontFamily -> 
             "Helvetica"]}}, Alignment -> Left]}, "Options" :> {}, 
       "DefaultOptions" :> {ControllerLinking -> True}],
-     ImageSizeCache->{621., {250., 255.}},
+     ImageSizeCache->{495., {348., 353.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -29073,9 +29073,9 @@ Rj+SvxO4x7v+0PH/AFxt/Dw=
  CellID->942454386]
 }, Open  ]]
 },
-WindowSize->{801.1333333333333, 1103.21},
+WindowSize->{801.1333333333333, 1305.0900000000001`},
 Visible->True,
-AuthoredSize->{801, 1103},
+AuthoredSize->{801, 1305},
 ScrollingOptions->{"HorizontalScrollRange"->Fit,
 "VerticalScrollRange"->Fit},
 ShowCellBracket->False,
@@ -29100,7 +29100,7 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[1486, 35, 73, 0, 52, "Title"],
 Cell[1562, 37, 2942, 64, 529, "Text"],
-Cell[4507, 103, 1718568, 28969, 507, "Output",
+Cell[4507, 103, 1718569, 28969, 703, "Output",
  CellID->942454386]
 }, Open  ]]
 }
@@ -29109,4 +29109,4 @@ Cell[4507, 103, 1718568, 28969, 507, "Output",
 
 (* End of internal cache information *)
 
-(* NotebookSignature OwprYPsYl#RGIB1qPFFdkg4R *)
+(* NotebookSignature qup2hlhLx@NypDw2#tMu1clD *)
