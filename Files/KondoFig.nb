@@ -1,0 +1,560 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20831,        552]
+NotebookOptionsPosition[     20382,        531]
+NotebookOutlinePosition[     20738,        547]
+CellTagsIndexPosition[     20695,        544]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x", ",", "1"}], "}"}], ",", "0.05"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", ".05"}], ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", "0.5", "-", ".05"}], ",", "1"}], "}"}]}], 
+          "}"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "0.5"}], ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0"}], "}"}], ",", "0.05"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", ".05"}], ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", "0.5", "-", ".05"}], ",", "0"}], "}"}]}], 
+          "}"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "0.5"}], ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(L\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{".5", ",", "1.3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(L\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{".5", ",", ".3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(R\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"2.5", ",", "1.3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", "Red", ",", "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(R\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"2.5", ",", ".3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", "Black", ",", "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{".4", ",", "1.15"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{".9", ",", "1.15"}], "}"}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{".4", ",", "0.15"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{".9", ",", "0.15"}], "}"}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2.4", ",", "1.15"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2.9", ",", "1.15"}], "}"}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<CFT 1:\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", ".2"}], ",", "1.3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<CFT 2:\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", ".2"}], ",", ".3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", "Red", ",", "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2.4", ",", "0.15"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2.9", ",", "0.15"}], "}"}]}], "}"}], "]"}], ",", "Black", 
+      ",", "Dashed", ",", 
+      RowBox[{"Line", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", 
+           RowBox[{"-", ".3"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", "1.5"}], "}"}]}], "}"}], "]"}], ","}], "}"}], 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Boundary\nConditions\>\"", ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif Extra\>\""}], ",", 
+          RowBox[{"FontSize", "\[Rule]", "16"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.55", ",", 
+          RowBox[{"-", ".55"}]}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      "Red", ",", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", 
+           RowBox[{"-", ".15"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", "0.25"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.754141672512258*^9, 3.754141749154943*^9}, {
+  3.754141793942795*^9, 3.754141918098159*^9}, {3.754142703096712*^9, 
+  3.754142772033373*^9}, {3.7541428212853003`*^9, 3.7541431669874077`*^9}, {
+  3.754143198477132*^9, 3.754143421394273*^9}, {3.754143527469706*^9, 
+  3.754143530024968*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{CircleBox[{0., 1}, 0.05], CircleBox[{0.5, 1}, 0.05], 
+     CircleBox[{1., 1}, 0.05], CircleBox[{1.5, 1}, 0.05], 
+     CircleBox[{2., 1}, 0.05], CircleBox[{2.5, 1}, 0.05], 
+     CircleBox[{3., 1}, 0.05]}, {LineBox[{{-0.45, 1}, {-0.05, 1}}], 
+     LineBox[{{0.05, 1}, {0.45, 1}}], LineBox[{{0.55, 1}, {0.95, 1}}], 
+     LineBox[{{1.05, 1}, {1.45, 1}}], LineBox[{{1.55, 1}, {1.95, 1}}], 
+     LineBox[{{2.05, 1}, {2.45, 1}}], LineBox[{{2.55, 1}, {2.95, 1}}], 
+     LineBox[{{3.05, 1}, {3.45, 1}}]}, {CircleBox[{0., 0}, 0.05], 
+     CircleBox[{0.5, 0}, 0.05], CircleBox[{1., 0}, 0.05], 
+     CircleBox[{1.5, 0}, 0.05], CircleBox[{2., 0}, 0.05], 
+     CircleBox[{2.5, 0}, 0.05], CircleBox[{3., 0}, 0.05]}, {
+     LineBox[{{-0.45, 0}, {-0.05, 0}}], LineBox[{{0.05, 0}, {0.45, 0}}], 
+     LineBox[{{0.55, 0}, {0.95, 0}}], LineBox[{{1.05, 0}, {1.45, 0}}], 
+     LineBox[{{1.55, 0}, {1.95, 0}}], LineBox[{{2.05, 0}, {2.45, 0}}], 
+     LineBox[{{2.55, 0}, {2.95, 0}}], LineBox[{{3.05, 0}, {3.45, 0}}]}, 
+    InsetBox[
+     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(L\\)]\\)\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif",
+      FontSize->15], {0.5, 1.3}], InsetBox[
+     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(L\\)]\\)\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif",
+      FontSize->15], {0.5, 0.3}], InsetBox[
+     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(R\\)]\\)\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif",
+      FontSize->15], {2.5, 1.3}], 
+    {RGBColor[1, 0, 0], InsetBox[
+      StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(R\\)]\\)\"\>",
+       StripOnInput->False,
+       FontFamily->"CMU Serif",
+       FontSize->15], {2.5, 0.3}]}, 
+    {GrayLevel[0], ArrowBox[{{0.4, 1.15}, {0.9, 1.15}}], 
+     ArrowBox[{{0.4, 0.15}, {0.9, 0.15}}], 
+     ArrowBox[{{2.4, 1.15}, {2.9, 1.15}}], InsetBox[
+      StyleBox["\<\"CFT 1:\"\>",
+       StripOnInput->False,
+       FontFamily->"CMU Serif",
+       FontSize->15], {-0.2, 1.3}], InsetBox[
+      StyleBox["\<\"CFT 2:\"\>",
+       StripOnInput->False,
+       FontFamily->"CMU Serif",
+       FontSize->15], {-0.2, 0.3}]}, 
+    {RGBColor[1, 0, 0], ArrowBox[{{2.4, 0.15}, {2.9, 0.15}}]}, 
+    {GrayLevel[0], Dashing[{Small, Small}], 
+     LineBox[{{1.5, -0.3}, {1.5, 1.5}}]}}, {InsetBox[
+     StyleBox["\<\"Boundary\\nConditions\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif Extra",
+      FontSize->16], {1.55, -0.55}], 
+    {RGBColor[1, 0, 0], ArrowBox[{{1.5, -0.15}, {1.5, 0.25}}]}}}]], "Output",
+ CellChangeTimes->{{3.7541428658855267`*^9, 3.7541429830107183`*^9}, {
+  3.754143021924471*^9, 3.754143058643021*^9}, {3.754143092015429*^9, 
+  3.754143167664075*^9}, {3.754143208636033*^9, 3.7541432492312107`*^9}, {
+  3.75414331825559*^9, 3.75414333438878*^9}, {3.754143381793325*^9, 
+  3.75414342181843*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x", ",", "1"}], "}"}], ",", "0.05"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", ".05"}], ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", "0.5", "-", ".05"}], ",", "1"}], "}"}]}], 
+          "}"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "0.5"}], ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x", ",", 
+            RowBox[{"-", "1"}]}], "}"}], ",", "0.05"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", ".05"}], ",", 
+             RowBox[{"-", "1"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x", "+", "0.5", "-", ".05"}], ",", 
+             RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "0.5"}], ",", "3", ",", "0.5"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(L\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{".5", ",", "1.3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(L\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{".5", ",", 
+          RowBox[{"-", ".7"}]}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(R\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"2.5", ",", "1.3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", "Red", ",", "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Psi]\), \(R\)]\)\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"2.5", ",", 
+          RowBox[{"-", ".7"}]}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      "Black", ",", "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{".4", ",", "1.15"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{".9", ",", "1.15"}], "}"}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{".4", ",", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "0.15"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{".9", ",", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "0.15"}]}], "}"}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2.4", ",", "1.15"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2.9", ",", "1.15"}], "}"}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<CFT 1:\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif Extra\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", ".2"}], ",", "1.3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<CFT 2:\>\"", ",", 
+          RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif Extra\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", ".2"}], ",", 
+          RowBox[{"-", "0.7"}]}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      "Red", ",", "\[IndentingNewLine]", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2.4", ",", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "0.15"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2.9", ",", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "0.15"}]}], "}"}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", "Black", ",", "Dashed", ",", 
+      RowBox[{"Line", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", 
+           RowBox[{"-", "1.3"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", 
+           RowBox[{"-", "0.3"}]}], "}"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Line", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", ".3"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", "1.5"}], "}"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Boundary\nConditions\>\"", ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<CMU Serif\>\""}], ",", 
+          RowBox[{"FontSize", "\[Rule]", "16"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.52", ",", "0"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", "Red", ",", 
+      RowBox[{"Arrow", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", 
+           RowBox[{"-", "1.15"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "0.25"}]}], "}"}]}], "}"}], "]"}]}], 
+     "}"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.754143545960676*^9, 3.7541438385368013`*^9}, {
+  3.754143871091955*^9, 3.7541438823227386`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{CircleBox[{0., 1}, 0.05], CircleBox[{0.5, 1}, 0.05], 
+     CircleBox[{1., 1}, 0.05], CircleBox[{1.5, 1}, 0.05], 
+     CircleBox[{2., 1}, 0.05], CircleBox[{2.5, 1}, 0.05], 
+     CircleBox[{3., 1}, 0.05]}, {LineBox[{{-0.45, 1}, {-0.05, 1}}], 
+     LineBox[{{0.05, 1}, {0.45, 1}}], LineBox[{{0.55, 1}, {0.95, 1}}], 
+     LineBox[{{1.05, 1}, {1.45, 1}}], LineBox[{{1.55, 1}, {1.95, 1}}], 
+     LineBox[{{2.05, 1}, {2.45, 1}}], LineBox[{{2.55, 1}, {2.95, 1}}], 
+     LineBox[{{3.05, 1}, {3.45, 1}}]}, {CircleBox[{0., -1}, 0.05], 
+     CircleBox[{0.5, -1}, 0.05], CircleBox[{1., -1}, 0.05], 
+     CircleBox[{1.5, -1}, 0.05], CircleBox[{2., -1}, 0.05], 
+     CircleBox[{2.5, -1}, 0.05], CircleBox[{3., -1}, 0.05]}, {
+     LineBox[{{-0.45, -1}, {-0.05, -1}}], LineBox[{{0.05, -1}, {0.45, -1}}], 
+     LineBox[{{0.55, -1}, {0.95, -1}}], LineBox[{{1.05, -1}, {1.45, -1}}], 
+     LineBox[{{1.55, -1}, {1.95, -1}}], LineBox[{{2.05, -1}, {2.45, -1}}], 
+     LineBox[{{2.55, -1}, {2.95, -1}}], LineBox[{{3.05, -1}, {3.45, -1}}]}, 
+    InsetBox[
+     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(L\\)]\\)\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif",
+      FontSize->15], {0.5, 1.3}], InsetBox[
+     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(L\\)]\\)\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif",
+      FontSize->15], {0.5, -0.7}], InsetBox[
+     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(R\\)]\\)\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif",
+      FontSize->15], {2.5, 1.3}], 
+    {RGBColor[1, 0, 0], InsetBox[
+      StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Psi]\\), \\(R\\)]\\)\"\>",
+       StripOnInput->False,
+       FontFamily->"CMU Serif",
+       FontSize->15], {2.5, -0.7}]}, 
+    {GrayLevel[0], ArrowBox[{{0.4, 1.15}, {0.9, 1.15}}], 
+     ArrowBox[{{0.4, -0.85}, {0.9, -0.85}}], 
+     ArrowBox[{{2.4, 1.15}, {2.9, 1.15}}], InsetBox[
+      StyleBox["\<\"CFT 1:\"\>",
+       StripOnInput->False,
+       FontFamily->"CMU Serif Extra",
+       FontSize->15], {-0.2, 1.3}], InsetBox[
+      StyleBox["\<\"CFT 2:\"\>",
+       StripOnInput->False,
+       FontFamily->"CMU Serif Extra",
+       FontSize->15], {-0.2, -0.7}]}, 
+    {RGBColor[1, 0, 0], ArrowBox[{{2.4, -0.85}, {2.9, -0.85}}]}, 
+    {GrayLevel[0], Dashing[{Small, Small}], 
+     LineBox[{{1.5, -1.3}, {1.5, -0.3}}], 
+     LineBox[{{1.5, 0.3}, {1.5, 1.5}}]}}, {InsetBox[
+     StyleBox["\<\"Boundary\\nConditions\"\>",
+      StripOnInput->False,
+      FontFamily->"CMU Serif",
+      FontSize->16], {1.52, 0}], 
+    {RGBColor[1, 0, 0], ArrowBox[{{1.5, -1.15}, {1.5, -0.75}}]}}}]], "Output",\
+
+ CellChangeTimes->{{3.7541435750594463`*^9, 3.7541438389094667`*^9}, {
+  3.754143871515984*^9, 3.7541438826618443`*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 655},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 25, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6788, 183, 386, "Input"],
+Cell[7371, 207, 2884, 57, 228, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10292, 269, 7300, 201, 403, "Input"],
+Cell[17595, 472, 2771, 56, 311, "Output"]
+}, Open  ]]
+}
+]
+*)
+
