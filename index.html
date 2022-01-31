@@ -83,20 +83,21 @@
 	<div  class="media">
 		<div  class="pull-left media-top">
 			<br>  <br> <br>   
-			<img class="img-rounded"  src="Files/Prof.jpg" alt="..."  width="200", height="auto"></img>
+			<img class="img-rounded"  src="Files/Prof.jpg" alt="..."  width="180", height="auto"></img>
 		</div> 
 		<h3> About Me </h3> 
 		<div class="media-body">
 			
 <!-- <h3 class="media-heading">Overview:</h3> -->
 	<p> I'm a PhD candidate in theoretical physics at Harvard. 
-		I am interested in using approaches from statistics and physics to gain insight into the structure and dynamics of learning algorithms, particularly neural networks. I am advised by <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>.
+		I am interested in gaining insight into the structure of algorithms that perform learning and inference, particularly neural networks. I am advised by <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>.
 		 My work is funded by the US Department of Defense through the <a href="https://ndseg.sysplus.com/NDSEG/Awardees/FY2019" target="_blank">NDSEG Fellowship</a> and by the <a href="https://hertzfoundation.org/fellows/fellow-profile/11341/Alex-Atanasov" target="_blank">Fannie and John Hertz Foundation</a>. 
 	<p>
-	I received my B.S. in physics and M.S. in mathematics from Yale in 2018. 
-	There, I performed research under <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland</a>, studying <a href=https://en.wikipedia.org/wiki/Conformal_field_theory target="_blank">conformal field theory</a> in dimensions three and four using the <a href=http://bootstrapcollaboration.com/ target="_blank">bootstrap program</a>. Conformal field theory is a powerful idea that allows us to gain insight into strongly-interacting systems at their phase transitions. Concurrently, I had the opportunity to learn from <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a> about the connections between quantum field theory and the Langlands program. 
+	I received my M.S. in mathematics and B.S. in physics from Yale in 2018.
+	There, I performed research on aspects of quantum field theory under <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland</a>, studying <a href=https://en.wikipedia.org/wiki/Conformal_field_theory target="_blank">conformal field theory</a> in dimensions three and four using the <a href=http://bootstrapcollaboration.com/ target="_blank">bootstrap program</a>, and under <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a> on its mathematical aspects and connections with the Langlands program. Concurrently, I performed research under <a href="http://murraylab.yale.edu/john_murray.profile?source=news" target="_blank">John Murray</a> on the dynamics of working memory in <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank">recurrent neural networks</a>. 
+	<!-- . Concurrently, I had the opportunity to learn from <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a> about the connections between quantum field theory and the Langlands program.  -->
 	<p>
-		In the past, I have interned at Google, where I developed <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" target="_blank">convolutional neural network</a> models in computer vision <!-- and <a href="https://arxiv.org/abs/1503.03832" target="_blank">face recognition</a>  -->for the <a href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank"> internet of things</a>. I also performed research under <a href="http://murraylab.yale.edu/john_murray.profile?source=news" target="_blank">John Murray</a>, modeling the dynamics of working memory in <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank">recurrent neural networks</a>.  Also throughout my undergrad, I worked at the  <a href="http://perimeterinstitute.ca/" target="_blank">Perimeter Institute for Theoretical Physics</a>, collaborating with <a href="https://perimeterinstitute.ca/people/erik-schnetter" target="_blank">Dr. Erik Schnetter</a> on finding ways around the  <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank">curse of dimensionality</a> in numerically solving partial differential equations.
+		In the past, I have interned at Google, where I developed <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" target="_blank">convolutional neural network</a> models in computer vision <!-- and <a href="https://arxiv.org/abs/1503.03832" target="_blank">face recognition</a>  -->for the <a href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank"> internet of things</a>.  Throughout my undergrad, I also worked at the  <a href="http://perimeterinstitute.ca/" target="_blank">Perimeter Institute for Theoretical Physics</a>, collaborating with <a href="https://perimeterinstitute.ca/people/erik-schnetter" target="_blank">Dr. Erik Schnetter</a> on finding ways around the  <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank">curse of dimensionality</a> in numerically solving partial differential equations.
 	</p>
 
 		<!-- Our work culminated in the <a href="https://github.com/dbehrlich/PsychRNN" target="_blank">PsychRNN</a> package. -->
@@ -133,10 +134,26 @@
 		</h4> 
 			Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. In the limit of infinite hidden layer width, appropriately initialized neural networks become kernel machines with a data-independent <a href="https://en.wikipedia.org/wiki/Neural_tangent_kernel" target="_blank">neural tangent kernel</a> (NTK). For finite width networks, the story changes, often drastically. This paper studies finite width networks at small initialization trained on whitened data and demonstrates how such networks can still be kernel machines with a data-dependent learned NTK. We analytically solve for the dynamics of linear networks in this regime and calculate the exact form of the final NTK. There, we identify a phase of training where the NTK aligns itself to the data well before it grows in absolute magnitude and before the loss drops substantially. We term this phenomenon "silent alignment". For nonlinear networks, much of the analysis goes through unchanged. We observe that in the case of unwhitened data, the network can realign itself drastically and not match the final NTK predictions. 
 			 <p> <strong>(2021) <em>ICLR 2022</em> </strong>
+				  <a href="https://openreview.net/forum?id=1NvflqAdoom">[OpenReview]</a>
 				  <a href="https://arxiv.org/abs/2111.00034">[arXiv]</a>
 			</p> 		
 	</div>
 	
+		<div class="media">
+		<div class="pull-left media-top">
+		<img class="img-rounded" src="Files/Structural modularity.png" alt="..." height="90" width="150"> 
+		</div>
+		<p>
+		<div class="media-body">
+		<h4 class="media-heading">PsychRNN: An Accessible and Flexible Python Package for
+	Training Recurrent Neural Network Models on Cognitive Tasks
+		</h4> 
+			A publication resulting from my undergraduate work in  <a href="https://medicine.yale.edu/lab/murray/profile/john_murray/" target="_blank">John Murray</a>'s lab. I worked on this from 2016-2018 in collaboration with <a href="https://davidbrandfonbrener.github.io/" target="_blank">David Brandfonbrener</a>, <a href="https://www.linkedin.com/in/daniel-ehrlich-91256137/" target="_blank">Daniel Ehrlich</a>, and <a href="https://scholar.google.com/citations?user=9wJGGvMAAAAJ&hl=en" target="_blank">Jasmine Stone</a>. The goal of this package is to give a platform for computational neuroscience researchers to more easily construct neural network architectures with biological constraints. The focus is on RNN-type architectures relevant for the modeling of working memory. 
+			 <p> <strong>(2021) <em>eNeuro</em> </strong>
+				 <a href="https://www.eneuro.org/content/8/1/ENEURO.0427-20.2020">[Journal Link]</a> 
+				  <a href="https://www.biorxiv.org/content/10.1101/2020.09.30.321752v1">[bioRxiv]</a> <a href="https://github.com/murraylab/PsychRNN">[Code Repository]</a>
+			</p> 		
+			</div>
 	
 	<div class="media">
 	<div class="pull-left media-top">
@@ -153,22 +170,6 @@
 	</div>
 	
 	
-
-	<div class="media">
-	<div class="pull-left media-top">
-	<img class="img-rounded" src="Files/Structural modularity.png" alt="..." height="90" width="150"> 
-	</div>
-	<p>
-	<div class="media-body">
-	<h4 class="media-heading">PsychRNN: An Accessible and Flexible Python Package for
-Training Recurrent Neural Network Models on Cognitive Tasks
-	</h4> 
-		A publication resulting from my undergraduate work in  <a href="https://medicine.yale.edu/lab/murray/profile/john_murray/" target="_blank">John Murray</a>'s lab. I worked on this from 2016-2018 in collaboration with <a href="https://davidbrandfonbrener.github.io/" target="_blank">David Brandfonbrener</a>, <a href="https://www.linkedin.com/in/daniel-ehrlich-91256137/" target="_blank">Daniel Ehrlich</a>, and <a href="https://scholar.google.com/citations?user=9wJGGvMAAAAJ&hl=en" target="_blank">Jasmine Stone</a>. The goal of this package is to give a platform for computational neuroscience researchers to more easily construct neural network architectures with biological constraints. The focus is on RNN-type architectures relevant for the modeling of working memory. 
-		 <p> <strong>(2021) <em>eNeuro</em> </strong>
-			 <a href="https://www.eneuro.org/content/8/1/ENEURO.0427-20.2020">[Journal Link]</a> 
-			  <a href="https://www.biorxiv.org/content/10.1101/2020.09.30.321752v1">[bioRxiv]</a> <a href="https://github.com/murraylab/PsychRNN">[Code Repository]</a>
-		</p> 		
-		</div>
 
 		<div class="media">
 		<div class="pull-left media-top">
@@ -548,7 +549,7 @@ These lecture notes are from the final presentation given in Professor <a href=h
 			  <p>
 			  <div class="media-body">
 			    <h4 class="media-heading">Complex Analysis: In Dialogue</h4> 
-	A book I wrote back in high school on complex analysis. It was initially a set of notes written as a result of self-study over the Summer of 2013. Gradually, it grew into a larger pedagogical work. The dialogue of the book is in the style of <a href="https://en.wikipedia.org/wiki/Johann_Joseph_Fux" target="_blank">Johann Joseph Fux's</a> work <a href="https://www.amazon.com/Study-Counterpoint-Johann-Joseph-Parnassum/dp/0393002772" target="_blank"><em>Gradus ad Parnassum</em></a>, a formal conversation between teacher and student at length on a large subject. You can see the type of fun I had as a 17 year-old, but its still fun to look back and re-read parts. Despite it being a teenager's first effort at textbook-writing, the book definitely has some charming parts. 
+	A book I wrote back in high school on complex analysis. It was initially a set of notes written as a result of self-study over the Summer of 2013. Gradually, it grew into a larger pedagogical work. The dialogue of the book is in the style of <a href="https://en.wikipedia.org/wiki/Johann_Joseph_Fux" target="_blank">Johann Joseph Fux's</a> work <a href="https://www.amazon.com/Study-Counterpoint-Johann-Joseph-Parnassum/dp/0393002772" target="_blank"><em>Gradus ad Parnassum</em></a>, a formal conversation between teacher and student at length on a large subject. You can see the type of fun I had as a 17 year-old, but its still fun to look back and re-read parts. 
 			    <p> <strong>(Fall 2013)</strong> <a href="Files/CAID.pdf">[PDF]</a></p>
 			  </div>
 		  </div>
@@ -560,7 +561,7 @@ These lecture notes are from the final presentation given in Professor <a href=h
 			  </div>
 			  <div class="media-body">
 			    <h4 class="media-heading">Complex Analysis: Appendix of Color Plots</h4> 
-				Accompanying color plots for students and readers to be able to visualize some of the complex functions mentioned in the above work. The plots were made in Java using elementary classes in complex-number arithmetic and graphics. You can find it on Amazon <a href="http://www.amazon.com/dp/1492992755/" target="_blank">here</a>.
+				Accompanying color plots for students and readers to be able to visualize some of the complex functions mentioned in the above work. Color plots of complex functions are much more in-vogue now than they were a decade ago. The plots were made in Java using elementary classes in complex-number arithmetic and graphics. You can find it on Amazon <a href="http://www.amazon.com/dp/1492992755/" target="_blank">here</a>.
 			    <p> <strong>(Fall 2013)</strong> <a href="Files/Appendix.pdf">[PDF]</a></p>
 			  </div>
 		  </div>
