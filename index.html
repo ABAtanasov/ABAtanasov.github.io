@@ -1,92 +1,249 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alex Atanasov's Homepage</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  	<link href="bootstrap_3/css/bootstrap.min.css" rel="stylesheet">
-	  	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+    <title>Alex Atanasov's Homepage</title>
+		<!-- Bootstrap 5 -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font Awesome 6 -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<style type="text/css">
-		body{
-			padding-left:-40px;
-			padding-right:-40px;
-			padding-top:-100px;
+		:root {
+			--primary-color: #2c3e50;
+			--accent-color: #3498db;
+			--text-dark: #333;
+			--text-light: #666;
+			--border-color: #e0e0e0;
 
+			/* Light mode colors */
+			--bg-primary: #ffffff;
+			--bg-secondary: #f8f9fa;
+			--card-bg: #ffffff;
+			--card-border: #e0e0e0;
+			--navbar-bg: rgba(50, 50, 50, 0.98);
+			--navbar-text: #fff;
+			--section-title: #2c3e50;
 		}
-		.jumbotron {
+
+		[data-theme="dark"] {
+			--bg-primary: #1a1a1a;
+			--bg-secondary: #2d2d2d;
+			--card-bg: #2d2d2d;
+			--card-border: #404040;
+			--text-dark: #e0e0e0;
+			--text-light: #b0b0b0;
+			--navbar-bg: rgba(20, 20, 20, 0.98);
+			--navbar-text: #fff;
+			--section-title: #ffffff;
+			--border-color: #404040;
+		}
+
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			color: var(--text-dark);
+			line-height: 1.7;
+			background-color: var(--bg-primary);
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+
+		.hero-section {
 		    position: relative;
-		    background: #000 url("Files/LandScape.JPG");
-		    width: 100%;
-		    height: 100%;
-			color: #ddd;
-			font-size: 20px;
+		    background: url("Files/LandScape.JPG");
 		    background-size: cover;
-		    overflow: hidden;
-			padding-top: 10%;
-			padding-bottom: 30%;
+		    background-position: center;
+		    color: #fff;
+		    padding: 350px 0 300px;
+		    margin-bottom: 0;
 		}
-		.jumbotron h3{
-		    color: #fff !important
-		}	
+
+		.hero-section h1 {
+			font-family: 'Cormorant Garamond', serif;
+			font-weight: 700;
+			font-size: 3.5rem;
+			margin-bottom: 0.5rem;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+		}
+
+		.hero-section .lead {
+			font-size: 1.3rem;
+			font-weight: 300;
+			opacity: 0.95;
+		}
+
+		.navbar {
+			background: var(--navbar-bg) !important;
+			backdrop-filter: blur(10px);
+			box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+			padding: 0.56rem 0;
+			transition: background-color 0.3s ease;
+		}
+
+		.navbar-brand, .nav-link {
+			color: var(--navbar-text) !important;
+			font-weight: 500;
+			transition: color 0.3s ease;
+		}
+
+		.nav-link:hover {
+			color: #3498db !important;
+		}
+
+		.navbar-toggler {
+			border-color: rgba(255, 255, 255, 0.3);
+		}
+
+		.navbar-toggler-icon {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+		}
+
+		.section-title {
+			font-weight: 700;
+			color: var(--section-title);
+			margin-bottom: 2rem;
+			padding-bottom: 0.75rem;
+			border-bottom: 3px solid var(--accent-color);
+			display: inline-block;
+		}
+
+		.publication-card {
+			border: 1px solid var(--card-border);
+			border-radius: 8px;
+			padding: 1.5rem;
+			margin-bottom: 2rem;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			background: var(--card-bg);
+		}
+
+		.publication-card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+		}
+
+		.publication-card img {
+			border-radius: 6px;
+			width: 100%;
+			height: auto;
+		}
+
+		.publication-card h4 {
+			color: var(--primary-color);
+			font-weight: 600;
+			margin-top: 1rem;
+		}
+
+		.publication-card a {
+			color: var(--accent-color);
+			text-decoration: none;
+			font-weight: 500;
+		}
+
+		.publication-card a:hover {
+			text-decoration: underline;
+		}
+
+		.profile-img {
+			border-radius: 12px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		}
+
+		.btn-custom {
+			background: var(--accent-color);
+			color: white;
+			border: none;
+			padding: 0.5rem 1.5rem;
+			border-radius: 6px;
+			font-weight: 500;
+			transition: background 0.3s ease;
+		}
+
+		.btn-custom:hover {
+			background: #2980b9;
+		}
+
+		footer {
+			background: var(--bg-secondary);
+			padding: 2rem 0;
+			margin-top: 4rem;
+			border-top: 1px solid var(--border-color);
+		}
+
+		/* Dark mode toggle button */
+		.theme-toggle {
+			background: transparent;
+			border: 1px solid var(--navbar-text);
+			border-radius: 6px;
+			padding: 0.4rem 0.8rem;
+			color: var(--navbar-text);
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-size: 1.1rem;
+			display: none; /* Hidden for now until images are optimized for dark mode */
+		}
+
+		.theme-toggle:hover {
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		/* Mobile responsive hero */
+		@media (max-width: 768px) {
+			.hero-section {
+				padding: 150px 0 120px;
+			}
+
+			.hero-section h1 {
+				font-size: 2.5rem;
+			}
+		}
 		</style>
   </head>
 	<!-- ********** #000 url("http://www.thebarefootnomad.com/wp-content/uploads/2013/10/Sunset-in-Sozopol-Bulgaria-by-Ivailo-Djilianov-on-Flickr1.jpg") center center; ************ -->	
 		
 	
 <!-- ********************** Navbar ******************* -->
-<nav id="mainNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	  <div class = "container">
-		<button class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
-	      <span class="sr-only">Toggle navigation</span>
-		  <span class="navbar-toggler-icon"></span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	    </button>
-	    <a class="navbar-brand" href="#about"><i class="fa fa-home fa-lg"></i></a></span> </a>
-
-	  <!-- Collect the nav links, forms, and other content for toggling -->
-	  <div class="collapse navbar-collapse">
-	    <ul class="nav navbar-nav">
-		  <li class = ""><a href="Files/Resume 2024.pdf"><i class="fa fa-file-text-o fa-lg"></i> Resume</a></li>
-		  <li class = ""><a href="#papers"><i class="fa fa-file-o fa-fw"></i> Papers</a></li>
-		  <li class = ""><a href="#lectures"><i class="fa fa-pencil-square-o fa-fw"></i> Lectures</a></li>
-		  <li class = ""><a href="#books"><i class="fa fa-book fa-fw"></i> Books</a></li>
-		  <!-- <li class = ""><a href="Files/CV.pdf"><i class="fa fa-th-list fa-lg"></i> CV</a></li> -->
-		  <li class = ""><a href="https://arxiv.org/a/atanasov_a_1.html"><i class="fa fa-file-pdf-o fa-lg"></i> arXiv</a></li>
-		  <li class = ""><a href="https://github.com/abatanasov"><i class="fa fa-github-square fa-lg"></i></a></li>
-  		  <li class = ""><a href="http://linkedin.com/in/alexatanasov"><i class="fa fa-linkedin-square fa-lg"></i></a></li>
-		  <!-- <li class = ""><a href="https://sketchesofreality.wordpress.com"><i class="fa fa-wordpress fa-lg"></i></a></li>	  -->
-	    </div> 
-	  </div><!-- /.navbar-collapse -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="#about"><i class="fa-solid fa-house"></i></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item"><a class="nav-link" href="Files/Resume 2024.pdf"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+				<li class="nav-item"><a class="nav-link" href="#papers"><i class="fa-solid fa-file"></i> Papers</a></li>
+				<li class="nav-item"><a class="nav-link" href="#lectures"><i class="fa-solid fa-pencil"></i> Lectures</a></li>
+				<li class="nav-item"><a class="nav-link" href="#books"><i class="fa-solid fa-book"></i> Books</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://arxiv.org/a/atanasov_a_1.html"><i class="fa-solid fa-file-pdf"></i> arXiv</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://github.com/abatanasov"><i class="fa-brands fa-github"></i></a></li>
+				<li class="nav-item"><a class="nav-link" href="http://linkedin.com/in/alexatanasov"><i class="fa-brands fa-linkedin"></i></a></li>
+				<li class="nav-item">
+					<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+						<i class="fa-solid fa-moon"></i>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
 
-<!-- *************** Body ***************** --> 
-<div class="jumbotron">
-	
-  	<div class="container">
-		<br><br><br><br><br><br><br><br>
-		<h1 style="font-family:calibri;"><center> <font color="#dd0000"> Alex Atanasov </font color> </center></h1>
-		<!-- <h3 style="font-family:courier;"><center> 
-			<a href="mailto:atanasov@g.harvard.edu?subject=Website Inquiry" style="color:#dd0000">atanasov@g.harvard.edu</a></center></h3>
-		<br> -->
+<!-- *************** Hero Section ***************** -->
+<div class="hero-section">
+	<div class="container text-center">
+		<h1>Alex Atanasov</h1>
 	</div>
 </div>
 
 
-<!-- *************** About Me ***************** --> 
-<div class ="container">   
-	<a name = "about"></a>
-	<div class="clearfix"></div>
-	<br><br>  
-	<hr class="featurette-divider">
-	<div  class="media">
-		<div  class="pull-left media-top">
-			<br>  <br> <br>   
-			<img class="img-rounded"  src="Files/Prof7.jpg" alt="..."  width="180", height="auto"></img>
-		</div> 
-		<h3> About Me </h3> 
-		<div class="media-body">
+<!-- *************** About Me ***************** -->
+<div class="container my-5">
+	<a name="about"></a>
+	<h2 class="section-title">About Me</h2>
+	<div class="row">
+		<div class="col-md-2 mb-4">
+			<img class="img-fluid profile-img" src="Files/Prof7.jpg" alt="Alex Atanasov">
+		</div>
+		<div class="col-md-10">
 			
 		
 <!-- <h3 class="media-heading">Overview:</h3> -->
@@ -111,366 +268,328 @@
 
 	
 
- <center><p>
-	<a href="Files/Resume 2024.pdf">[Résumé]</a>&nbsp;
-	<a href="https://scholar.google.com/citations?user=abMQRYIAAAAJ&hl=en">[Google Scholar]</a>&nbsp;
-	<a href="https://github.com/ABAtanasov">[GitHub]</a>&nbsp;
-	<a href="https://www.linkedin.com/in/alexatanasov/">[LinkedIn]</a>&nbsp;
-	<a href="https://twitter.com/ABAtanasov">[Twitter]</a>
-  </p></center>
-	
-	</div>
-	</div>
-			
-	<!-- *************** Papers ***************** --> 
-	<a name = "papers"></a>
-	<div class="clearfix"></div>
-	<br><br>
-    <hr class="featurette-divider">
-	<h2>Publications</h2>
-
-
-	<div class="media"></div>
-		<div class="pull-left media-top">
-			<img class="img-rounded" src="Files/PhasePlotThesis.png" alt="..." width="161"> 
+			<div class="text-center mt-4">
+				<a href="Files/Resume 2024.pdf" class="me-3">Résumé</a>
+				<a href="https://scholar.google.com/citations?user=abMQRYIAAAAJ&hl=en" class="me-3">Google Scholar</a>
+				<a href="https://github.com/ABAtanasov" class="me-3">GitHub</a>
+				<a href="https://www.linkedin.com/in/alexatanasov/" class="me-3">LinkedIn</a>
+				<a href="https://twitter.com/ABAtanasov">Twitter</a>
 			</div>
-			<p>
-			<div class="media-body">
-			<h4 class="media-heading">PhD Thesis: Scaling and Renormalization in Statistical Learning
-			</h4> 
-			<p><strong>Abstract:</strong> This thesis develops a theoretical framework for understanding the scaling properties of information processing systems in the regime of large data, large model size, and large computational resources. The goal is to develop an understanding of the impressive performance that deep neural networks have exhibited. </p>
-
-			<p>The first part of this thesis examines models linear in their parameters but nonlinear in their inputs. This includes linear regression, kernel regression, and random feature models. Utilizing random matrix theory and free probability, I provide precise characterizations of their training dynamics, generalization capabilities, and out-of-distribution performance, alongside a detailed analysis of sources of variance. A variety of scaling laws observed in state-of-the-art large language and vision models are already present in this simple setting. </p>
- 
-			<p>The second part of this thesis focuses on representation learning. Leveraging insights from models linear in inputs but nonlinear in parameters, I present a theory of early-stage representation learning where a network with small weight initialization can learn features without altering the loss. This phenomenon, termed silent alignment, is empirically validated across various architectures and datasets. The idea of starting at small initialization leads naturally to the "maximal update parameterization", μP, that allows for feature learning at infinite width. I present empirical studies showing that practical networks can approach their theoretical infinite-width feature learning limits. Finally, I consider down-scaling the output of a neural network by a fixed constant. When this constant is small, the network behaves as a linear model in parameters; when large, it induces silent alignment. I present theoretical and empirical results of the influence of this hyperparameter on feature learning, performance, and dynamics. </p>
-
-			<em>Committee: </em> Cengiz Pehlevan, Haim Sompolinsky, and Michael Brenner.
+		</div>
+	</div>
+</div>
 			
-				 <p> <strong>(2024) <em>Accepted</em> </strong>
+<!-- *************** Papers ***************** -->
+<div class="container my-5">
+	<a name="papers"></a>
+	<h2 class="section-title">Publications</h2>
+
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/PhasePlotThesis.png" alt="PhD Thesis">
+			</div>
+			<div class="col-md-10">
+				<h4>PhD Thesis: Scaling and Renormalization in Statistical Learning</h4>
+				<p><strong>Abstract:</strong> This thesis develops a theoretical framework for understanding the scaling properties of information processing systems in the regime of large data, large model size, and large computational resources. The goal is to develop an understanding of the impressive performance that deep neural networks have exhibited.</p>
+
+				<p>The first part of this thesis examines models linear in their parameters but nonlinear in their inputs. This includes linear regression, kernel regression, and random feature models. Utilizing random matrix theory and free probability, I provide precise characterizations of their training dynamics, generalization capabilities, and out-of-distribution performance, alongside a detailed analysis of sources of variance. A variety of scaling laws observed in state-of-the-art large language and vision models are already present in this simple setting.</p>
+
+				<p>The second part of this thesis focuses on representation learning. Leveraging insights from models linear in inputs but nonlinear in parameters, I present a theory of early-stage representation learning where a network with small weight initialization can learn features without altering the loss. This phenomenon, termed silent alignment, is empirically validated across various architectures and datasets. The idea of starting at small initialization leads naturally to the "maximal update parameterization", μP, that allows for feature learning at infinite width. I present empirical studies showing that practical networks can approach their theoretical infinite-width feature learning limits. Finally, I consider down-scaling the output of a neural network by a fixed constant. When this constant is small, the network behaves as a linear model in parameters; when large, it induces silent alignment. I present theoretical and empirical results of the influence of this hyperparameter on feature learning, performance, and dynamics.</p>
+
+				<p><em>Committee:</em> Cengiz Pehlevan, Haim Sompolinsky, and Michael Brenner.</p>
+
+				<p><strong>(2024) <em>Accepted</em></strong>
 					<a href="https://dash.harvard.edu/entities/publication/7df32c32-79fb-435b-b0c0-71e134dee5e8">[Harvard]</a>
 					<a href="https://www.proquest.com/docview/3130536009">[ProQuest]</a>
-				</p> 		
+				</p>
+			</div>
 		</div>
+	</div>
 
 		
 
 
-	<div class="media">
-			<div class="pull-left media-top">
-				<img class="img-rounded" src="Files/2pt.png" alt="..." width="150"> 
-				</div>
-				<p>
-				<div class="media-body">
-				<h4 class="media-heading">Two-Point Deterministic Equivalence for Stochastic Gradient Dynamics in Linear Models
-				</h4> 
-				Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a>, <a href="https://cypaquette.github.io/" target="_blank">Courtney Paquette</a>  and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. Using random matrix theory, we derive a novel deterministic equivalence. Essentially all results (up to that point) on models of neural scaling laws in high-dimensional regression follow directly from this equivalence. This accounts for finite training time, finite dataset size, finite parameter count, and SGD effects jointly. 
-					 <p> <strong>(2025) <em>ICML 2025 Workshop on High-dimensional Learning Dynamics</em> </strong>
-						<a href="https://openreview.net/forum?id=iAv9sDEeuE">[OpenReview]</a>
-						<a href="https://arxiv.org/abs/2502.05074">[arXiv]</a>
-					</p> 		
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/2pt.png" alt="Two-Point Deterministic Equivalence">
 			</div>
+			<div class="col-md-10">
+				<h4>Two-Point Deterministic Equivalence for Stochastic Gradient Dynamics in Linear Models</h4>
+				<p>Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a>, <a href="https://cypaquette.github.io/" target="_blank">Courtney Paquette</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. Using random matrix theory, we derive a novel deterministic equivalence. Essentially all results (up to that point) on models of neural scaling laws in high-dimensional regression follow directly from this equivalence. This accounts for finite training time, finite dataset size, finite parameter count, and SGD effects jointly.</p>
+				<p><strong>(2025) <em>ICML 2025 Workshop on High-dimensional Learning Dynamics</em></strong>
+					<a href="https://openreview.net/forum?id=iAv9sDEeuE">[OpenReview]</a>
+					<a href="https://arxiv.org/abs/2502.05074">[arXiv]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 		
 
-	<div class="media">
-		<div class="pull-left media-top">
-			<img class="img-rounded" src="Files/GammaSweep.png" alt="..." width="150"> 
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/GammaSweep.png" alt="The Optimization Landscape of SGD">
 			</div>
-			<p>
-			<div class="media-body">
-			<h4 class="media-heading">The Optimization Landscape of SGD Across the Feature Learning Strength
-			</h4> 
-			Work with <a href="https://james-simon.github.io/" target="_blank">Jamie Simon</a>, <a href="https://alexandrumeterez.github.io/" target="_blank">Alex Meterez</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>.
-			We perform a thorough sweep over the feature learning strength (also known as the "richness") for large-scale networks trained on real data. We find that the optimal learning rate in SGD depends nontrivially on the richness, in a way that has not been explored in prior literature. We focus on the <em>online</em> setting, representative of modern large models. This setting has been underexplored both theoretically and empirically when studying the effect of richness. We identify several scaling regimes of the learning rate with the richness, and explain them in a simple model. These regimes exhibit a wealth of different dynamical phenomena, including catapult effects, progressive sharpening, and the silent alignment effect. After accounting for the learning rate, we find that richer networks are at least as good as standard networks. We also observe a remarkable consistency of dynamics, learned functions, and learned representations in the ultra-rich regime that has not been previously reported. 
-				 <p> <strong>(2024) <em>ICLR 2025</em> </strong>
+			<div class="col-md-10">
+				<h4>The Optimization Landscape of SGD Across the Feature Learning Strength</h4>
+				<p>Work with <a href="https://james-simon.github.io/" target="_blank">Jamie Simon</a>, <a href="https://alexandrumeterez.github.io/" target="_blank">Alex Meterez</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We perform a thorough sweep over the feature learning strength (also known as the "richness") for large-scale networks trained on real data. We find that the optimal learning rate in SGD depends nontrivially on the richness, in a way that has not been explored in prior literature. We focus on the <em>online</em> setting, representative of modern large models. This setting has been underexplored both theoretically and empirically when studying the effect of richness. We identify several scaling regimes of the learning rate with the richness, and explain them in a simple model. These regimes exhibit a wealth of different dynamical phenomena, including catapult effects, progressive sharpening, and the silent alignment effect. After accounting for the learning rate, we find that richer networks are at least as good as standard networks. We also observe a remarkable consistency of dynamics, learned functions, and learned representations in the ultra-rich regime that has not been previously reported.</p>
+				<p><strong>(2024) <em>ICLR 2025</em></strong>
 					<a href="https://openreview.net/forum?id=iEfdvDTcZg">[OpenReview]</a>
 					<a href="https://arxiv.org/abs/2410.04642">[arXiv]</a>
-					
-					
-				</p> 		
+				</p>
+			</div>
 		</div>
+	</div>
 	
 
-	<div class="media">
-		<div class="pull-left media-top">
-			<img class="img-rounded" src="Files/RichLazyPhase.png" alt="..." width="150"> 
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/RichLazyPhase.png" alt="How Feature Learning Can Improve Neural Scaling Laws">
 			</div>
-			<p>
-			<div class="media-body">
-			<h4 class="media-heading">How Feature Learning Can Improve Neural Scaling Laws
-			</h4> 
-			Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>.
-				We propose the simplest model where feature learning yields a concrete and measurable improvement to the neural scaling law of performance with time. By leveraging linear network theory combined with dynamical mean field theory, we derive exact analytic expressions for the dynamics. We identify three scaling regimes corresponding to varying task difficulties: hard, easy, and super easy tasks. For easy and super-easy target functions, which lie in the reproducing kernel Hilbert space (RKHS) defined by the initial infinite-width Neural Tangent Kernel (NTK), the scaling exponents remain unchanged between feature learning and kernel regime models. For hard tasks, defined as those outside the RKHS of the initial NTK, we demonstrate both analytically and empirically that feature learning can improve scaling with training time and compute, nearly doubling the exponent for hard tasks. This leads to a different compute-optimal strategy to scale parameters and training steps in the feature-learning regime.
-				We propose a hypothesis that <em>feature learning only improves the scaling law if the task is outside the Hilbert space of the infinite width NTK</em>, and dub this the <strong>Source Hypothesis</strong>, as it requires the source exponent to be below a specific threshold for feature learning to yield scaling improvement. 
-				  We further extract corrections due to finite model size, finite dataset size, and SGD noise.
-				 <p> <strong>(2024) <em>ICLR 2025 (Spotlight)</em> </strong>
+			<div class="col-md-10">
+				<h4>How Feature Learning Can Improve Neural Scaling Laws</h4>
+				<p>Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We propose the simplest model where feature learning yields a concrete and measurable improvement to the neural scaling law of performance with time. By leveraging linear network theory combined with dynamical mean field theory, we derive exact analytic expressions for the dynamics. We identify three scaling regimes corresponding to varying task difficulties: hard, easy, and super easy tasks. For easy and super-easy target functions, which lie in the reproducing kernel Hilbert space (RKHS) defined by the initial infinite-width Neural Tangent Kernel (NTK), the scaling exponents remain unchanged between feature learning and kernel regime models. For hard tasks, defined as those outside the RKHS of the initial NTK, we demonstrate both analytically and empirically that feature learning can improve scaling with training time and compute, nearly doubling the exponent for hard tasks. This leads to a different compute-optimal strategy to scale parameters and training steps in the feature-learning regime. We propose a hypothesis that <em>feature learning only improves the scaling law if the task is outside the Hilbert space of the infinite width NTK</em>, and dub this the <strong>Source Hypothesis</strong>, as it requires the source exponent to be below a specific threshold for feature learning to yield scaling improvement. We further extract corrections due to finite model size, finite dataset size, and SGD noise.</p>
+				<p><strong>(2024) <em>ICLR 2025 (Spotlight)</em></strong>
 					<a href="https://openreview.net/forum?id=dEypApI1MZ">[OpenReview]</a>
-					  <a href="https://arxiv.org/abs/2409.17858">[arXiv]</a>
-					  
-				</p> 		
+					<a href="https://arxiv.org/abs/2409.17858">[arXiv]</a>
+				</p>
+			</div>
 		</div>
+	</div>
 	
 
-	<div class="media">
-		<div class="pull-left media-top">
-			<img class="img-rounded" src="Files/CorrGCV.png" alt="..." width="150"> 
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/CorrGCV.png" alt="Risk and Cross Validation in Ridge Regression">
 			</div>
-			<p>
-			<div class="media-body">
-			<h4 class="media-heading">Risk and Cross Validation in Ridge Regression with Correlated Samples
-			</h4> 
-				Work with <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>.
-				By leveraging techniques in modern random matrix theory and free probability, we obtain exact analytic results for the performance of ridge regression when samples have correlations between one another. This goes beyond the common i.i.d. setting that is usually studied.  We demonstrate that in this setting, the generalized cross validation estimator (GCV) fails to correctly predict the out-of-sample risk. However, under realistic assumptions on the noise structure, we show that there exists a modification of the GCV that yields an efficiently-computable unbiased estimator of the out-of-sample risk. We dub this the CorrGCV. Finally, we also exactly characterize the over-optimism of testing on a point with nontrivial correlations to the training set. 
-				 <p> <strong>(2024) <em>ICML 2025</em> </strong>
+			<div class="col-md-10">
+				<h4>Risk and Cross Validation in Ridge Regression with Correlated Samples</h4>
+				<p>Work with <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. By leveraging techniques in modern random matrix theory and free probability, we obtain exact analytic results for the performance of ridge regression when samples have correlations between one another. This goes beyond the common i.i.d. setting that is usually studied. We demonstrate that in this setting, the generalized cross validation estimator (GCV) fails to correctly predict the out-of-sample risk. However, under realistic assumptions on the noise structure, we show that there exists a modification of the GCV that yields an efficiently-computable unbiased estimator of the out-of-sample risk. We dub this the CorrGCV. Finally, we also exactly characterize the over-optimism of testing on a point with nontrivial correlations to the training set.</p>
+				<p><strong>(2024) <em>ICML 2025</em></strong>
 					<a href="https://openreview.net/forum?id=GMwKpJ9TiR">[OpenReview]</a>
-					  <a href="https://arxiv.org/abs/2408.04607">[arXiv]</a>
-				</p> 		
-		</div>
-
-	<div class="media">
-	<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/S_trans.png" alt="..." width="150"> 
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading">Scaling and Renormalization in High-Dimensional Regression
-		</h4> 
-			Work with <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>.
-			We introduce the basic concepts of random matrix theory and free probability necessary to characterize the performance of high-dimensional regression across a variety of machine learning models. By applying the <em>S</em>-transform of free probability, we provide a straightforward derivation of the average case behavior of many of the quantities of interest in these settings. We also provide novel formulas for the generalization error of general random feature models and fine-grained bias-variance decompositions in that setting. We go on to study the scaling properties of random feature models, and the effects of weight structure and additive feature noise. Our results extend and provide a unifying perspective on earlier models of neural scaling laws.
-			 <p> <strong>(2024) <em>In Submission</em> </strong>
-
-				  <a href="https://arxiv.org/abs/2405.00592">[arXiv]</a>
-			</p> 		
-	</div>
-
-	<div class="media">
-	<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/test_scaling.png" alt="..." width="150"> 
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading">A Dynamical Model of Neural Scaling Laws
-		</h4> 
-			Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. 
-			We study a model similar to our onset of variance paper, which involves projecting a large set of features down to a lower dimensional space and trying to reconstruct the signal from that. Here, however, we use dynamical mean field theory (DMFT) to analytically recover exact analytic expressions for the training and generalization dynamics of this model through time. This recovers many of the major phenomena observed in the training of large-scale language and vision models.
-			 <p> <strong>(2024) <em>ICML 2024</em> </strong>
-				<a href="https://openreview.net/forum?id=nbOY1OmtRc">[OpenReview]</a>
-				<a href="https://arxiv.org/abs/2402.01092">[arXiv]</a>
-			</p> 		
-	</div>
-
-	<div class="media">
-	<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/Consistency.png" alt="..." width="150"> 
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading">Maximal Update (μP) Networks Are Consistent Across Widths At Realistic Scales
-		</h4> 
-			Work with <a href="https://nikhilvyas.github.io/" target="_blank">Nikhil Vyas</a>, <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://openreview.net/profile?id=~Depen_Morwani1" target="_blank">Depen Morwani</a>, <a href="https://www.linkedin.com/in/sabarish-sainathan-911019152" target="_blank">Sabarish Sainathan</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. 
-			We perform an extensive empirical study on realistic networks in the "maximal update parameterization" (<a href="https://arxiv.org/abs/2011.14522" taget="_blank">μP</a>) of Greg Yang (introduced by other authors under the name "mean field parameterization)".
-			 In this parameterization, networks can learn features even at infinite width. We study networks across realistic datasets for vision nets on (CIFAR-5m, ImageNet) and transformer models on (Wikitext-103, C4). Wider networks are seen to perform better, consistent with prior works. 
-			 We show that not only do loss curves of realistically wide networks converge to a limiting behavior corresponding to the infinite width limit, but that the individual network outputs, internal representations, and dynamical phenomena also behave nearly identically across large widths.
-			 We find that this is robust across architectures and datasets in the setting where each example is new, but that when frequently repeating examples, it can be broken. 
-			 Finally, we develop a new spectral perspective on the bias that can make narrower width networks perform worse, even after ensembling.
-			 <p> <strong>(2023) <em>NeurIPS 2023</em> </strong>
-				  <a href="https://openreview.net/forum?id=LTdfYIvbHc">[OpenReview]</a>
-				  <a href="https://arxiv.org/abs/2305.18411">[arXiv]</a>
-			</p> 		
-	</div>
-
-	<div class="media">
-	<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/VarLim.png" alt="..." width="150"> 
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading">The Onset of Variance-Dominated Behavior for Networks in the Lazy and Rich Regimes
-		</h4> 
-			Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://www.linkedin.com/in/sabarish-sainathan-911019152" target="_blank">Sabarish Sainathan</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. 
-			At infinite width, the training and generalization capabilities of neural networks simplify to those of kernel machines or "mean field limits". 
-			We empirically study the problem of polynomial interpolation with finite-width networks and observe that as the dataset size grows, the network enters a regime where it strictly underperforms its infinite-width counterpart. 
-			We demonstrate that this worse behavior is driven by initialization variance and that one can recover the infinite width limit to high accuracy by ensembling over sufficiently many initializations of the network. This transition can be delayed by feature learning. 
-			We demonstrate that this behavior is reproduced in a simple "signal plus noise" toy model.
-			 <p> <strong>(2022) <em>ICLR 2023</em> </strong>
-				  <a href="https://openreview.net/forum?id=JLINxPOVTh7">[OpenReview]</a>
-				  <a href="https://arxiv.org/abs/2212.12147">[arXiv]</a>
-			</p> 		
-	</div>
-
-	<div class="media">
-	<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/NN-Kernel.png" alt="..." width="150"> 
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading">Neural Networks as Kernel Learners: The Silent Alignment Effect
-		</h4> 
-			Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. 
-			In the limit of infinite hidden layer width, appropriately initialized neural networks become kernel machines with a data-independent <a href="https://en.wikipedia.org/wiki/Neural_tangent_kernel" target="_blank">neural tangent kernel</a> (NTK). 
-			For finite width networks, the story changes, often drastically. 
-			This paper studies finite width networks at small initialization trained on whitened data and demonstrates how such networks can still be kernel machines with a data-dependent learned NTK.
-			 We analytically solve for the dynamics of linear networks in this regime and calculate the exact form of the final NTK. 
-			 There, we identify a phase of training where the NTK aligns itself to the data well before it grows in absolute magnitude and before the loss drops substantially. 
-			 We term this phenomenon "silent alignment". For nonlinear networks, much of the analysis goes through unchanged. We observe that in the case of unwhitened data, the network can realign itself drastically and not match the final NTK predictions. 
-			 <p> <strong>(2021) <em>ICLR 2022</em> </strong>
-				  <a href="https://openreview.net/forum?id=1NvflqAdoom">[OpenReview]</a>
-				  <a href="https://arxiv.org/abs/2111.00034">[arXiv]</a>
-			</p> 		
-	</div>
-	
-		<div class="media">
-		<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/Structural modularity.png" alt="..." height="90" width="150"> 
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading">PsychRNN: An Accessible and Flexible Python Package for
-	Training Recurrent Neural Network Models on Cognitive Tasks
-		</h4> 
-			A publication resulting from my undergraduate work in  <a href="https://medicine.yale.edu/lab/murray/profile/john_murray/" target="_blank">John Murray</a>'s lab. 
-			I worked on this from 2016-2018 in collaboration with <a href="https://davidbrandfonbrener.github.io/" target="_blank">David Brandfonbrener</a>, <a href="https://scholar.google.com/citations?user=xNx1nFEAAAAJ&hl=en" target="_blank">Daniel Ehrlich</a>, and <a href="https://syncrostone.github.io/" target="_blank">Jasmine Stone</a>. 
-			The goal of this package is to give a platform for computational neuroscience researchers to more easily construct neural network architectures with biological constraints. The focus is on RNN-type architectures relevant for the modeling of working memory. 
-			 <p> <strong>(2021) <em>eNeuro</em> </strong>
-				 <a href="https://www.eneuro.org/content/8/1/ENEURO.0427-20.2020">[Journal Link]</a> 
-				  <a href="https://www.biorxiv.org/content/10.1101/2020.09.30.321752v1">[bioRxiv]</a> <a href="https://github.com/murraylab/PsychRNN">[Code Repository]</a>
-			</p> 		
+					<a href="https://arxiv.org/abs/2408.04607">[arXiv]</a>
+				</p>
 			</div>
-	
-	<div class="media">
-	<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/SUSYSpec.png" alt="..." width="150"> 
 		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading">Precision Bootstrap for the <em>N</em> = 1 Super-Ising Model
-		</h4> 
-			Work with David Poland, Junchen Rong, Ning Su, and Aaron Hillman. We extend <a href="https://arxiv.org/abs/1807.05702" target="_blank">prior results</a> from both of our groups on the minimal supersymmetric extension to the 3D Ising universality class to provide a more thorough numerical analysis. 
-			We combine this with analytic techniques coming from the structure of conformal theories at large spin and demonstrate solid agreement between analytic theory and numerical experiment. 
-			A deeper analytic understanding of this universality class may open the door for new methods and ideas to tackle its cousin: the 3D Ising model.
-			 <p> <strong>(2022) <em>Journal of High Energy Physics</em> </strong>
-				 <a href="https://link.springer.com/article/10.1007/JHEP08(2022)136">[Journal Link]</a>
-				  <a href="https://arxiv.org/abs/2201.02206">[arXiv]</a>
-			</p> 		
-			
-			
 	</div>
-	
-	
 
-		<div class="media">
-		<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/Block.png" alt="..."  width="150"></img>   
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading"> Conformal Block Expansion in Celestial Conformal Field Theory
-		</h4> 
-			Work with Andy Strominger and collaborators. Flat space amplitudes can be recast as correlation function on a ``celestial sphere'' at null infinity. 
-			These correlation functions are constrained to satisfy conformal covariance coming from the Lorentz group in flat spacetime. 
-			The corresponding 4-point correlation functions for a 2-to-2 scattering process can be expanded in terms of conformal blocks. 
-			This expansion captures the spectral data that is exchanged from the celestial perspective. For scalar external particles with massive scalar exchange, we find a new class of light-ray operators that are exchanged, and construct their corresponding waveforms in flat space. 
-			 <p> <strong>(2021) <em>Physical Review D</em> </strong>
-				 <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.104.126033">[Journal Link]</a>
-				  <a href="https://arxiv.org/abs/2104.13432">[arXiv]</a> <a href="https://www.youtube.com/watch?v=wNLNIL81T_s&t=3589">[IAS Talk]</a>
-		</p> 		
-		</div>
-		
-		<div class="media">
-		<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/22.png" alt="..." height="130" width="150"></img>   
-		</div>
-		<p>
-		<div class="media-body">
-		<h4 class="media-heading"> (2,2) Scattering and the Celestial Torus
-		</h4> 
-			Work with Andy Strominger and collaborators on understanding the asymptotic structure of spacetime in mixed 2,2 signature, which we call "Klein Space", and its relationship to scattering and the <a href="https://phy.princeton.edu/events/pcts-celestial-holography" target="_blank">celestial holography</a> program. 
-			We provide the resolution of null infinity in 2,2 signature as a torus fibration over an interval. 
-			The corresponding "celestial torus" is conjectured to hold a conformal field theory containing information on scattering processes. 
-			We derive a new basis of scattering states motivated by the symmetries of this torus, and relate this to the conventional Mellin basis used in the existing literature.
-			 <p> <strong>(2021) <em>Journal of High Energy Physics</em> </strong>
-				 <a href="https://link.springer.com/article/10.1007/JHEP07(2021)083">[Journal Link]</a>
-				 <a href="https://arxiv.org/abs/2101.09591">[arXiv]</a>
-				  <a href="https://youtu.be/yKuypvR4bls?t=12412">[Princeton Talk]</a>
-			</p> 		
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/S_trans.png" alt="Scaling and Renormalization">
 			</div>
-
-
-	<div class="media">
-	  <div class="pull-left media-top">
-	  <img class="img-rounded" src="Files/3DSCFT.png" alt="..." height="140" width="150"></img>   
-	 </div>
-	 <p>
-	 <div class="media-body">
-	 <h4 class="media-heading">Bootstrapping the Minimal 3D Superconformal Field Theory
-</h4> 
-	 A paper written in collaboration with <a href="https://phy.princeton.edu/people/aaron-hillman" target="_blank">Aaron Hillman</a> and my undergraduate physics advisor, Professor <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland</a>, published in the <em>Journal of High Energy Physics</em> (JHEP). We apply the conformal bootstrap program to study a space of interesting conformal field theories (CFTs). 
-
-	 In the past, the conformal bootstrap has had great <a href=https://www.nature.com/articles/nphys3761 target="_blank">success</a> in pinning down the critical exponents of the famously impenetrable <a href=https://en.wikipedia.org/wiki/Ising_model target="_blank">3D Ising model</a> to the <a href=https://www.nature.com/articles/nphys3761/figures/3 target="_blank">highest precision</a> ever achieved. </p>
-	 
-	 
-	 Here, we present a bootstrap study of the space of 3D CFTs sharing the same parity symmetry and relevant operator structure as the 3D Ising model. 
-	 This space is diagrammed and elaborated upon in this beautifully-written <a href=https://www.quantamagazine.org/using-the-bootstrap-physicists-uncover-geometry-of-theory-space-20170223/ target="_blank">Quanta article</a>.
-	  We note a new kink that lies near the conjectured scaling dimensions of the 3D <i>N</i> = 1 Ising model: the Ising model's supersymmetric cousin. A noted <a href=http://science.sciencemag.org/content/344/6181/280 target="_blank">prior work</a> conjectures that this supersymmetric theory may in fact be emergent at the boundary of topological superconductors.
-	 By combining a scan over three-point function coefficients together with an analytic formula derived form supersymmetry that constrains the three-point correlators, we obtain tight bounds for the scaling dimensions and operator spectra of this model.
-	  Our results lead us to conjecture a surprising exact value for the 3-point coefficient ratio of this CFT. This then gives a conjectured exact analytic value for the scaling dimensions of the first two relevant scalars.
-
-<!--	 For more information see the Simons Foundation's <a href="http://bootstrapcollaboration.com/" target="_blank">bootstrap collaboration website</a>. -->
-	 <p> <strong>(2018) <em>Journal of High Energy Physics</em></strong> 
-		 <a href="https://link.springer.com/article/10.1007%2FJHEP11%282018%29140">[Journal Link]</a>
-		 <a href="https://arxiv.org/abs/1807.05702">[arXiv]</a>
-		 <a href="https://github.com/ABAtanasov/IsingBootstrap/">[Code Repository]</a>
-	 </p>
+			<div class="col-md-10">
+				<h4>Scaling and Renormalization in High-Dimensional Regression</h4>
+				<p>Work with <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We introduce the basic concepts of random matrix theory and free probability necessary to characterize the performance of high-dimensional regression across a variety of machine learning models. By applying the <em>S</em>-transform of free probability, we provide a straightforward derivation of the average case behavior of many of the quantities of interest in these settings. We also provide novel formulas for the generalization error of general random feature models and fine-grained bias-variance decompositions in that setting. We go on to study the scaling properties of random feature models, and the effects of weight structure and additive feature noise. Our results extend and provide a unifying perspective on earlier models of neural scaling laws.</p>
+				<p><strong>(2024) <em>In Submission</em></strong>
+					<a href="https://arxiv.org/abs/2405.00592">[arXiv]</a>
+				</p>
+			</div>
 		</div>
-	</div>	
+	</div>
 
-	<div class="media">
-	  <div class="pull-left media-top">
-	  <img class="img-rounded" src="Files/Hooft2.png" alt="..." height="90" width="150"></img>   
-	 </div>
-	 <p>
-	 <div class="media-body">
-	 <h4 class="media-heading">Magnetic Monopoles, `t Hooft Lines, and the
-Geometric Langlands Correspondence
-</h4> 
-	 My undergraduate thesis in mathematics under my advisor, Professor <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>. Provides an overview of the <a href="https://en.wikipedia.org/wiki/Geometric_Langlands_correspondence" target="_blank">Geometric Langlands correspondence</a> from the point of view of physics. 
-	 This thesis is based on the material I learned from my advisor's two seminar courses on the subject, a variety of independent reading, and by attending a <a href="https://perimeterinstitute.ca/conferences/gauge-theory-geometric-langlands-and-vertex-operator-algebras" target="_blank">conference on the same topic</a> at the Perimeter Institute.
-	 <p> <strong>(2018) <em>Yale Senior Thesis</em></strong> <a href="Files/Thesis.pdf">[PDF]</a> <a href="Files/Thesis Presentation.pdf">[Presentation Slides]</a> </p>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/test_scaling.png" alt="Dynamical Model of Neural Scaling Laws">
+			</div>
+			<div class="col-md-10">
+				<h4>A Dynamical Model of Neural Scaling Laws</h4>
+				<p>Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We study a model similar to our onset of variance paper, which involves projecting a large set of features down to a lower dimensional space and trying to reconstruct the signal from that. Here, however, we use dynamical mean field theory (DMFT) to analytically recover exact analytic expressions for the training and generalization dynamics of this model through time. This recovers many of the major phenomena observed in the training of large-scale language and vision models.</p>
+				<p><strong>(2024) <em>ICML 2024</em></strong>
+					<a href="https://openreview.net/forum?id=nbOY1OmtRc">[OpenReview]</a>
+					<a href="https://arxiv.org/abs/2402.01092">[arXiv]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Consistency.png" alt="Maximal Update Networks">
+			</div>
+			<div class="col-md-10">
+				<h4>Maximal Update (μP) Networks Are Consistent Across Widths At Realistic Scales</h4>
+				<p>Work with <a href="https://nikhilvyas.github.io/" target="_blank">Nikhil Vyas</a>, <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://openreview.net/profile?id=~Depen_Morwani1" target="_blank">Depen Morwani</a>, <a href="https://www.linkedin.com/in/sabarish-sainathan-911019152" target="_blank">Sabarish Sainathan</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We perform an extensive empirical study on realistic networks in the "maximal update parameterization" (<a href="https://arxiv.org/abs/2011.14522" taget="_blank">μP</a>) of Greg Yang (introduced by other authors under the name "mean field parameterization)". In this parameterization, networks can learn features even at infinite width. We study networks across realistic datasets for vision nets on (CIFAR-5m, ImageNet) and transformer models on (Wikitext-103, C4). Wider networks are seen to perform better, consistent with prior works. We show that not only do loss curves of realistically wide networks converge to a limiting behavior corresponding to the infinite width limit, but that the individual network outputs, internal representations, and dynamical phenomena also behave nearly identically across large widths. We find that this is robust across architectures and datasets in the setting where each example is new, but that when frequently repeating examples, it can be broken. Finally, we develop a new spectral perspective on the bias that can make narrower width networks perform worse, even after ensembling.</p>
+				<p><strong>(2023) <em>NeurIPS 2023</em></strong>
+					<a href="https://openreview.net/forum?id=LTdfYIvbHc">[OpenReview]</a>
+					<a href="https://arxiv.org/abs/2305.18411">[arXiv]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/VarLim.png" alt="Onset of Variance-Dominated Behavior">
+			</div>
+			<div class="col-md-10">
+				<h4>The Onset of Variance-Dominated Behavior for Networks in the Lazy and Rich Regimes</h4>
+				<p>Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://www.linkedin.com/in/sabarish-sainathan-911019152" target="_blank">Sabarish Sainathan</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. At infinite width, the training and generalization capabilities of neural networks simplify to those of kernel machines or "mean field limits". We empirically study the problem of polynomial interpolation with finite-width networks and observe that as the dataset size grows, the network enters a regime where it strictly underperforms its infinite-width counterpart. We demonstrate that this worse behavior is driven by initialization variance and that one can recover the infinite width limit to high accuracy by ensembling over sufficiently many initializations of the network. This transition can be delayed by feature learning. We demonstrate that this behavior is reproduced in a simple "signal plus noise" toy model.</p>
+				<p><strong>(2022) <em>ICLR 2023</em></strong>
+					<a href="https://openreview.net/forum?id=JLINxPOVTh7">[OpenReview]</a>
+					<a href="https://arxiv.org/abs/2212.12147">[arXiv]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/NN-Kernel.png" alt="Neural Networks as Kernel Learners">
+			</div>
+			<div class="col-md-10">
+				<h4>Neural Networks as Kernel Learners: The Silent Alignment Effect</h4>
+				<p>Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. In the limit of infinite hidden layer width, appropriately initialized neural networks become kernel machines with a data-independent <a href="https://en.wikipedia.org/wiki/Neural_tangent_kernel" target="_blank">neural tangent kernel</a> (NTK). For finite width networks, the story changes, often drastically. This paper studies finite width networks at small initialization trained on whitened data and demonstrates how such networks can still be kernel machines with a data-dependent learned NTK. We analytically solve for the dynamics of linear networks in this regime and calculate the exact form of the final NTK. There, we identify a phase of training where the NTK aligns itself to the data well before it grows in absolute magnitude and before the loss drops substantially. We term this phenomenon "silent alignment". For nonlinear networks, much of the analysis goes through unchanged. We observe that in the case of unwhitened data, the network can realign itself drastically and not match the final NTK predictions.</p>
+				<p><strong>(2021) <em>ICLR 2022</em></strong>
+					<a href="https://openreview.net/forum?id=1NvflqAdoom">[OpenReview]</a>
+					<a href="https://arxiv.org/abs/2111.00034">[arXiv]</a>
+				</p>
+			</div>
 		</div>
 	</div>
 	
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Structural modularity.png" alt="PsychRNN">
+			</div>
+			<div class="col-md-10">
+				<h4>PsychRNN: An Accessible and Flexible Python Package for Training Recurrent Neural Network Models on Cognitive Tasks</h4>
+				<p>A publication resulting from my undergraduate work in <a href="https://medicine.yale.edu/lab/murray/profile/john_murray/" target="_blank">John Murray</a>'s lab. I worked on this from 2016-2018 in collaboration with <a href="https://davidbrandfonbrener.github.io/" target="_blank">David Brandfonbrener</a>, <a href="https://scholar.google.com/citations?user=xNx1nFEAAAAJ&hl=en" target="_blank">Daniel Ehrlich</a>, and <a href="https://syncrostone.github.io/" target="_blank">Jasmine Stone</a>. The goal of this package is to give a platform for computational neuroscience researchers to more easily construct neural network architectures with biological constraints. The focus is on RNN-type architectures relevant for the modeling of working memory.</p>
+				<p><strong>(2021) <em>eNeuro</em></strong>
+					<a href="https://www.eneuro.org/content/8/1/ENEURO.0427-20.2020">[Journal Link]</a>
+					<a href="https://www.biorxiv.org/content/10.1101/2020.09.30.321752v1">[bioRxiv]</a>
+					<a href="https://github.com/murraylab/PsychRNN">[Code Repository]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/SUSYSpec.png" alt="Precision Bootstrap">
+			</div>
+			<div class="col-md-10">
+				<h4>Precision Bootstrap for the <em>N</em> = 1 Super-Ising Model</h4>
+				<p>Work with David Poland, Junchen Rong, Ning Su, and Aaron Hillman. We extend <a href="https://arxiv.org/abs/1807.05702" target="_blank">prior results</a> from both of our groups on the minimal supersymmetric extension to the 3D Ising universality class to provide a more thorough numerical analysis. We combine this with analytic techniques coming from the structure of conformal theories at large spin and demonstrate solid agreement between analytic theory and numerical experiment. A deeper analytic understanding of this universality class may open the door for new methods and ideas to tackle its cousin: the 3D Ising model.</p>
+				<p><strong>(2022) <em>Journal of High Energy Physics</em></strong>
+					<a href="https://link.springer.com/article/10.1007/JHEP08(2022)136">[Journal Link]</a>
+					<a href="https://arxiv.org/abs/2201.02206">[arXiv]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	
 
-	<div class="media">
-	  <div class="pull-left media-top">
-	  <img class="img-rounded" src="Files/SparseGrid2.png" alt="..." height="150" width="150"></img>   
-	 </div>
-	 <p>
-	 <div class="media-body">
-	 <h4 class="media-heading">Sparse Grid Discretizations based on a Discontinuous Galerkin Method
-</h4> 
-	 A paper written in collaboration with <a href="https://www.perimeterinstitute.ca/people/erik-schnetter" target="_blank">Dr. Erik Schnetter</a> at the <a href="https://www.perimeterinstitute.ca/" target="_blank"> Perimeter Institute</a> for theoretical physics,
-	  on using the <a href="https://en.wikipedia.org/wiki/Discontinuous_Galerkin_method" target="_blank">discontinuous Galerkin</a> method together with <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.9392&rep=rep1&type=pdf" target="_blank">sparse grids</a> to evolve scalar wave equations in higher dimensional spacetimes.
-	 We developed a julia package, <a href="https://github.com/ABAtanasov/GalerkinSparseGrids.jl" target="_blank">GalerkinSparseGrids.jl</a> for the implementation of this theory, and present its results for 5+1 and 6+1-dimensional wave evolutions in the paper. This yields a significant computational step forward in the capacity to solve hyperbolic partial differential equations in higher dimensional space, and we hope to extend this work to Einstein's equations in an anisotropic spacetime.
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Block.png" alt="Conformal Block Expansion">
+			</div>
+			<div class="col-md-10">
+				<h4>Conformal Block Expansion in Celestial Conformal Field Theory</h4>
+				<p>Work with Andy Strominger and collaborators. Flat space amplitudes can be recast as correlation function on a "celestial sphere" at null infinity. These correlation functions are constrained to satisfy conformal covariance coming from the Lorentz group in flat spacetime. The corresponding 4-point correlation functions for a 2-to-2 scattering process can be expanded in terms of conformal blocks. This expansion captures the spectral data that is exchanged from the celestial perspective. For scalar external particles with massive scalar exchange, we find a new class of light-ray operators that are exchanged, and construct their corresponding waveforms in flat space.</p>
+				<p><strong>(2021) <em>Physical Review D</em></strong>
+					<a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.104.126033">[Journal Link]</a>
+					<a href="https://arxiv.org/abs/2104.13432">[arXiv]</a>
+					<a href="https://www.youtube.com/watch?v=wNLNIL81T_s&t=3589">[IAS Talk]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 
-	 <p> <strong>(2017) </strong> <a href="https://arxiv.org/abs/1710.09356">[arXiv]</a> <a href="Files/DG_sparse_grids.pdf">[PDF]</a> 
-		 <a href="https://github.com/ABAtanasov/GalerkinSparseGrids.jl/">[Code Repository]</a>
-	 </p>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/22.png" alt="(2,2) Scattering">
+			</div>
+			<div class="col-md-10">
+				<h4>(2,2) Scattering and the Celestial Torus</h4>
+				<p>Work with Andy Strominger and collaborators on understanding the asymptotic structure of spacetime in mixed 2,2 signature, which we call "Klein Space", and its relationship to scattering and the <a href="https://phy.princeton.edu/events/pcts-celestial-holography" target="_blank">celestial holography</a> program. We provide the resolution of null infinity in 2,2 signature as a torus fibration over an interval. The corresponding "celestial torus" is conjectured to hold a conformal field theory containing information on scattering processes. We derive a new basis of scattering states motivated by the symmetries of this torus, and relate this to the conventional Mellin basis used in the existing literature.</p>
+				<p><strong>(2021) <em>Journal of High Energy Physics</em></strong>
+					<a href="https://link.springer.com/article/10.1007/JHEP07(2021)083">[Journal Link]</a>
+					<a href="https://arxiv.org/abs/2101.09591">[arXiv]</a>
+					<a href="https://youtu.be/yKuypvR4bls?t=12412">[Princeton Talk]</a>
+				</p>
+			</div>
 		</div>
 	</div>
 
 
-	<div class="media">
-	  <div class="pull-left media-top">
-	  <img class="img-rounded" src="Files/ConductingSphere.png" alt="..." height="120" width="150"></img>   
-	 </div>
-	 <p>
-	 <div class="media-body">
-	 <h4 class="media-heading">Simple, accurate electrostatics-based formulas for calculating detachment energies of fullerenes</h4> 
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/3DSCFT.png" alt="3D Superconformal Field Theory">
+			</div>
+			<div class="col-md-10">
+				<h4>Bootstrapping the Minimal 3D Superconformal Field Theory</h4>
+				<p>A paper written in collaboration with <a href="https://phy.princeton.edu/people/aaron-hillman" target="_blank">Aaron Hillman</a> and my undergraduate physics advisor, Professor <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland</a>, published in the <em>Journal of High Energy Physics</em> (JHEP). We apply the conformal bootstrap program to study a space of interesting conformal field theories (CFTs). In the past, the conformal bootstrap has had great <a href=https://www.nature.com/articles/nphys3761 target="_blank">success</a> in pinning down the critical exponents of the famously impenetrable <a href=https://en.wikipedia.org/wiki/Ising_model target="_blank">3D Ising model</a> to the <a href=https://www.nature.com/articles/nphys3761/figures/3 target="_blank">highest precision</a> ever achieved. Here, we present a bootstrap study of the space of 3D CFTs sharing the same parity symmetry and relevant operator structure as the 3D Ising model. This space is diagrammed and elaborated upon in this beautifully-written <a href=https://www.quantamagazine.org/using-the-bootstrap-physicists-uncover-geometry-of-theory-space-20170223/ target="_blank">Quanta article</a>. We note a new kink that lies near the conjectured scaling dimensions of the 3D <i>N</i> = 1 Ising model: the Ising model's supersymmetric cousin. A noted <a href=http://science.sciencemag.org/content/344/6181/280 target="_blank">prior work</a> conjectures that this supersymmetric theory may in fact be emergent at the boundary of topological superconductors. By combining a scan over three-point function coefficients together with an analytic formula derived form supersymmetry that constrains the three-point correlators, we obtain tight bounds for the scaling dimensions and operator spectra of this model. Our results lead us to conjecture a surprising exact value for the 3-point coefficient ratio of this CFT. This then gives a conjectured exact analytic value for the scaling dimensions of the first two relevant scalars.</p>
+				<p><strong>(2018) <em>Journal of High Energy Physics</em></strong>
+					<a href="https://link.springer.com/article/10.1007%2FJHEP11%282018%29140">[Journal Link]</a>
+					<a href="https://arxiv.org/abs/1807.05702">[arXiv]</a>
+					<a href="https://github.com/ABAtanasov/IsingBootstrap/">[Code Repository]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 
-	 A paper written in collaboration with <a href="http://www2.mitre.org/tech/nanotech/ourwork/staff.html" target="_blank">Dr. James Ellenbogen</a> at the <a href="https://www.mitre.org/" target="_blank"> MITRE  Corporation</a>, published in <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.95.032508" target="_blank">Physical Review A</a>, 
-	 on deriving a simple analytic formulas via electrostatics-based methods to accurately calculate the values of <a href="https://en.wikipedia.org/wiki/Electron_affinity#Molecular_electron_affinities" target="_blank">electron affinities</a>, <a href="https://en.wikipedia.org/wiki/Ionization_energy#Vertical_and_adiabatic_ionization_energy_in_molecules" target="_blank">ionization potentials</a>, and <a href="https://en.wikipedia.org/wiki/Capacitance#Nanoscale_systems" target="_blank">capacitances</a> of icosahedral carbon fullerenes.
-	  The aforementioned analytic formulae yield significant insight into both the physics of electron detachment in the fullerenes and shed light on <a href="http://www.mitre.org/sites/default/files/pdf/12_3838.pdf" target="_blank">prior investigations</a> of the relationship between sizes of the fullerenes and their molecular capacitances.
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Hooft2.png" alt="Geometric Langlands">
+			</div>
+			<div class="col-md-10">
+				<h4>Magnetic Monopoles, 't Hooft Lines, and the Geometric Langlands Correspondence</h4>
+				<p>My undergraduate thesis in mathematics under my advisor, Professor <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>. Provides an overview of the <a href="https://en.wikipedia.org/wiki/Geometric_Langlands_correspondence" target="_blank">Geometric Langlands correspondence</a> from the point of view of physics. This thesis is based on the material I learned from my advisor's two seminar courses on the subject, a variety of independent reading, and by attending a <a href="https://perimeterinstitute.ca/conferences/gauge-theory-geometric-langlands-and-vertex-operator-algebras" target="_blank">conference on the same topic</a> at the Perimeter Institute.</p>
+				<p><strong>(2018) <em>Yale Senior Thesis</em></strong>
+					<a href="Files/Thesis.pdf">[PDF]</a>
+					<a href="Files/Thesis Presentation.pdf">[Presentation Slides]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 
-	 <p> <strong>(2017) <em>Physical Review A</em></strong> <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.95.032508">[Journal Link]</a> <a href="Files/AtanasovEllenbogenPRA.pdf">[PDF]</a> </p>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/SparseGrid2.png" alt="Sparse Grid Discretizations">
+			</div>
+			<div class="col-md-10">
+				<h4>Sparse Grid Discretizations based on a Discontinuous Galerkin Method</h4>
+				<p>A paper written in collaboration with <a href="https://www.perimeterinstitute.ca/people/erik-schnetter" target="_blank">Dr. Erik Schnetter</a> at the <a href="https://www.perimeterinstitute.ca/" target="_blank">Perimeter Institute</a> for theoretical physics, on using the <a href="https://en.wikipedia.org/wiki/Discontinuous_Galerkin_method" target="_blank">discontinuous Galerkin</a> method together with <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.9392&rep=rep1&type=pdf" target="_blank">sparse grids</a> to evolve scalar wave equations in higher dimensional spacetimes. We developed a julia package, <a href="https://github.com/ABAtanasov/GalerkinSparseGrids.jl" target="_blank">GalerkinSparseGrids.jl</a> for the implementation of this theory, and present its results for 5+1 and 6+1-dimensional wave evolutions in the paper. This yields a significant computational step forward in the capacity to solve hyperbolic partial differential equations in higher dimensional space, and we hope to extend this work to Einstein's equations in an anisotropic spacetime.</p>
+				<p><strong>(2017)</strong>
+					<a href="https://arxiv.org/abs/1710.09356">[arXiv]</a>
+					<a href="Files/DG_sparse_grids.pdf">[PDF]</a>
+					<a href="https://github.com/ABAtanasov/GalerkinSparseGrids.jl/">[Code Repository]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/ConductingSphere.png" alt="Fullerenes">
+			</div>
+			<div class="col-md-10">
+				<h4>Simple, accurate electrostatics-based formulas for calculating detachment energies of fullerenes</h4>
+				<p>A paper written in collaboration with <a href="http://www2.mitre.org/tech/nanotech/ourwork/staff.html" target="_blank">Dr. James Ellenbogen</a> at the <a href="https://www.mitre.org/" target="_blank">MITRE Corporation</a>, published in <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.95.032508" target="_blank">Physical Review A</a>, on deriving a simple analytic formulas via electrostatics-based methods to accurately calculate the values of <a href="https://en.wikipedia.org/wiki/Electron_affinity#Molecular_electron_affinities" target="_blank">electron affinities</a>, <a href="https://en.wikipedia.org/wiki/Ionization_energy#Vertical_and_adiabatic_ionization_energy_in_molecules" target="_blank">ionization potentials</a>, and <a href="https://en.wikipedia.org/wiki/Capacitance#Nanoscale_systems" target="_blank">capacitances</a> of icosahedral carbon fullerenes. The aforementioned analytic formulae yield significant insight into both the physics of electron detachment in the fullerenes and shed light on <a href="http://www.mitre.org/sites/default/files/pdf/12_3838.pdf" target="_blank">prior investigations</a> of the relationship between sizes of the fullerenes and their molecular capacitances.</p>
+				<p><strong>(2017) <em>Physical Review A</em></strong>
+					<a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.95.032508">[Journal Link]</a>
+					<a href="Files/AtanasovEllenbogenPRA.pdf">[PDF]</a>
+				</p>
+			</div>
 		</div>
 	</div>
 
@@ -503,162 +622,176 @@ Geometric Langlands Correspondence
 	</div>
 	 -->
 			
-			<div class="media">
-					  <div class="pull-left media-top">
-					  <img class="img-rounded" src="Files/Splitting.png" alt="..." height="75" width="150"></img>   
-					  </div>
-					  <div class="media-body">
-					    <h4 class="media-heading">Graded Lie Algebras, Supersymmetry, and Applications</h4> 
-						Final term paper on supersymmetry for Francesco Iachello's class on Group Theory, Lie Algebras, and their applications to physics. Many of the examples are taken from the material he provided me (c.f. the references section).
-					    <p> <strong>(Fall 2015)</strong> <a href="Files/Supersymmetry.pdf">[PDF]</a></p>
-					  </div>
-					</div>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Splitting.png" alt="Graded Lie Algebras">
+			</div>
+			<div class="col-md-10">
+				<h4>Graded Lie Algebras, Supersymmetry, and Applications</h4>
+				<p>Final term paper on supersymmetry for Francesco Iachello's class on Group Theory, Lie Algebras, and their applications to physics. Many of the examples are taken from the material he provided me (c.f. the references section).</p>
+				<p><strong>(Fall 2015)</strong>
+					<a href="Files/Supersymmetry.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 
 					
-	<!-- *************** Lessons ***************** --> 
-	<a name = "lectures"></a>
-	<div class="clearfix"></div>
-	<br><br>
-    <hr class="featurette-divider">
-	<h2> Lectures and Notes </h2>
+</div>
 
-	<h3> Graduate School: </h3>
-	<div class="media">
-		<div class="pull-left media-top">
-		<img class="img-rounded" src="Files/SL.png" alt="..."  width="150"></img>   
+<!-- *************** Lectures ***************** -->
+<div class="container my-5">
+	<a name="lectures"></a>
+	<h2 class="section-title">Lectures and Notes</h2>
+	<h3 class="mt-4">Graduate School:</h3>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/SL.png" alt="Neural Scaling Laws">
+			</div>
+			<div class="col-md-10">
+				<h4>Simple Derivation of Neural Scaling Laws</h4>
+				<p>Many of our papers <a href="https://arxiv.org/abs/2402.01092" target="_blank">[1]</a> <a href="https://arxiv.org/abs/2405.00592" target="_blank">[2]</a> <a href="https://arxiv.org/abs/2409.17858" target="_blank">[3]</a> <a href="https://arxiv.org/abs/2502.05074" target="_blank">[4]</a> focus on studying scaling laws in linear models. In order to cover all possible cases that arise, we must rely on techniques such as random matrix theory (RMT) or dynamical mean field theory (DMFT). Many other papers proceed similarly. This poses a barrier to entry, as theorists unfortunately tend to do. <strong>For practitioners, almost none of this is necessary to derive the scaling law exponents of interest in the regimes of relevance</strong>. One can derive the key scaling law in under 2 pages of basic math. I thank <a href="http://joschu.net/" target="_blank">John Schulman</a> for encouraging me to write and post this.</p>
+				<p><strong>(2025)</strong>
+					<a href="Files/Scaling_Laws_Note.pdf">[Note]</a>
+				</p>
+			</div>
 		</div>
-		<div class="media-body">
-		  <h4 class="media-heading"> Simple Derivation of Neural Scaling Laws </h4> 
-		  Many of our papers <a href="https://arxiv.org/abs/2402.01092" target="_blank">[1]</a>
-		  <a href="https://arxiv.org/abs/2405.00592" target="_blank">[2]</a>
-		  <a href="https://arxiv.org/abs/2409.17858" target="_blank">[3]</a>
-		  <a href="https://arxiv.org/abs/2502.05074" target="_blank">[4]</a> focus on studying scaling laws in linear models. In order to cover all possible cases that arise, we must rely on techniques such as random matrix theory (RMT) or dynamical mean field theory (DMFT). Many other papers proceed similarly. This poses a barrier to entry, as theorists unfortunately tend to do. <strong>For practitioners, almost none of this is necessary to derive the scaling law exponents of interest in the regimes of relevance</strong>. One can derive the key scaling law in under 2 pages of basic math. I thank <a href="http://joschu.net/" target="_blank">John Schulman</a> for encouraging me to write and post this. 
-		  
-		  <p> <strong>(2025)</strong> <a href="Files/Scaling_Laws_Note.pdf">[Note]</a>  
-			   </p>
-		  </div>
-	  </div>
+	</div>
 
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/ReplicaNote2.png" alt="..."  width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> Notes on Statistical Mechanics and Learning </h4> 
-				Various notes and solutions for textbooks I've read since 2021 to supplement my research. The topics range from statistical mechanics to neuroscience to deep learning theory and application.
-			    <p> <strong>(2021-2023)</strong> <a href="Files/RMT.pdf">[Bouchaud & Potters: Random Matrix Theory]</a>  [MacKay: Information Theory, Inference, and Learning Algorithms <a href="Files/MacKay Part 0.pdf">Part 0</a>, <a href="Files/MacKay Part 1.pdf">Part 1</a>, <a href="Files/MacKay Part 2.pdf">Part 2</a>] <a href="Files/ESL Solutions.pdf">[HST: Elements of Statistical Learning]</a> <a href="Files/Engel and Van den Broeck.pdf">[Engel and Van Den Broeck: Statistical Mechanics of Learning]</a> <a href="Files/Kardar Stat Phys.pdf"a>[Kardar: Statistical Physics of Fields]</a> [Mezard and Montanari: Information, Physics, and Computation <a href="Files/Mezard Montanari 1.pdf"a>Chapter 1</a>, <a href="Files/Mezard Montanari 4.pdf"a>Chapter 4</a>, <a href="Files/Mezard Montanari 5.pdf"a>Chapter 5</a>, <a href="Files/Mezard Montanari 8.pdf"a>Chapter 8</a>]
-				 	</p>
-				</div>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/ReplicaNote2.png" alt="Statistical Mechanics Notes">
 			</div>
-
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/strings.png" alt="..."  width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> Solutions to "String Theory in a Nutshell" </h4> 
-				In early graduate school, while still studying string theory, I wanted to get as much reading out of the way as possible. Alongside several books on quantum field theory, I did a cover-to-cover reading of E Kiritsis' "String Theory in a Nutshell" and tried to solve all problems. This is the write up for. 
-				Most problems are done, save for various topics in compactification and running of effective couplings, as well as the new edition's great chapter on applied holography. 
-				Perhaps I will one day finish these remaining problems. <strong>If you find errors and want me to make corrections, please do reach out over email. 
-					Also, if you have solutions to problems I haven't done, please also reach out. I'd love to add them in, of course crediting you.</strong>
-			    <p> <strong>(2019-2020)</strong> <a href="Files/Kiritsis Solutions.pdf">[PDF]</a> 
-				 	</p>
-				</div>
-				</div>
-
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/OSFT.png" alt="..."  width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> Aspects of Open String Field Theory </h4> 
-				Final project and presentation for Prof. <a href="https://www.physics.harvard.edu/people/facpages/yin" target="_blank">Xi Yin</a>'s second semester course on string theory. 
-				Here I discuss <a href="https://en.wikipedia.org/wiki/String_field_theory">string field theory</a>, a "second quantized" formalism for dealing with off-shell processes in string theory. 
-				This is more involved than the commonly taught "first quantized" on-shell treatment of strings and superstrings. 
-				At least for open strings, there is a remarkably simple formulation in terms of Witten's <a href="https://www.sciencedirect.com/science/article/pii/0550321386901550">"cubic" open string field theory</a> (OSFT).
-				 In this final paper I give an exposition to this theory, and detail how the standard formalism can be used to recover the Veneziano amplitude, following <a href="https://www.sciencedirect.com/science/article/pii/0550321386902117?via%3Dihub">Giddings</a>.
-				  Then, I review Sen's remarkable <a href="https://arxiv.org/abs/hep-th/9912249">paper</a> demonstrating how the simple technique of level-truncation in OSFT can "see" the infamous bosonic string tachyon's potential and equate its minimum with the condensation of the D-brane.
-			    <p> <strong>(Spring 2020)</strong> <a href="Files/Strings Final Paper.pdf">[PDF]</a> 
-				 	</p>
-				</div>
+			<div class="col-md-10">
+				<h4>Notes on Statistical Mechanics and Learning</h4>
+				<p>Various notes and solutions for textbooks I've read since 2021 to supplement my research. The topics range from statistical mechanics to neuroscience to deep learning theory and application.</p>
+				<p><strong>(2021-2023)</strong>
+					<a href="Files/RMT.pdf">[Bouchaud & Potters: Random Matrix Theory]</a>
+					[MacKay: Information Theory, Inference, and Learning Algorithms <a href="Files/MacKay Part 0.pdf">Part 0</a>, <a href="Files/MacKay Part 1.pdf">Part 1</a>, <a href="Files/MacKay Part 2.pdf">Part 2</a>]
+					<a href="Files/ESL Solutions.pdf">[HST: Elements of Statistical Learning]</a>
+					<a href="Files/Engel and Van den Broeck.pdf">[Engel and Van Den Broeck: Statistical Mechanics of Learning]</a>
+					<a href="Files/Kardar Stat Phys.pdf">[Kardar: Statistical Physics of Fields]</a>
+					[Mezard and Montanari: Information, Physics, and Computation <a href="Files/Mezard Montanari 1.pdf">Chapter 1</a>, <a href="Files/Mezard Montanari 4.pdf">Chapter 4</a>, <a href="Files/Mezard Montanari 5.pdf">Chapter 5</a>, <a href="Files/Mezard Montanari 8.pdf">Chapter 8</a>]
+				</p>
 			</div>
+		</div>
+	</div>
 
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/Kondo.png" alt="..."  width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> The Kondo Effect, Conformal Field Theory, and Quantum Dots </h4> 
-				Final project and presentation for Prof. <a href="https://scholar.harvard.edu/avishwanath" target="_blank">Ashvin Vishwanath</a>'s course on topics in quantum matter. Ken Wilson won the <a href="https://www.nobelprize.org/prizes/physics/1982/summary/" target="_blank">Nobel Prize in 1982</a> for applying his renormalization group (RG) technique to understand the low-temperature "strongly-interacting" regime of a the <a href="https://en.wikipedia.org/wiki/Kondo_effect" target="_blank">Kondo effect</a> in a metal with magnetic impurity. 
-				From the modern perspective of studying field theory as a flow from one RG fixed point to another, we study a simple 1+1D version of the Kondo effect, and show how both the noninteracting and strongly-coupled fixed points can be understood in terms of <a href="https://en.wikipedia.org/wiki/Wess%E2%80%93Zumino%E2%80%93Witten_model" target="_blank">WZW conformal field theories</a>. 
-				We use this as a jumping-off point to think about how this formalism could shed new light into recent developments in understanding the <a href="https://www.nature.com/articles/526203a" target="_blank">Kondo effect in quantum dots</a>. 
-			    <p> <strong>(Fall 2018)</strong> <a href="Files/Kondo Effect.pdf">[PDF]</a> 
-				 	</p>
-				</div>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/strings.png" alt="String Theory Solutions">
 			</div>
-
-
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/AdSCFT.png" alt="..."  width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> Holographic Duality and Applications </h4> 
-				My set of handwritten notes for Prof. <a href="https://web.mit.edu/physics/people/faculty/liu_hong.html" target="_blank">Hong Liu</a>'s Lectures on (MIT course 8.871) on the <a href="https://en.wikipedia.org/wiki/AdS/CFT_correspondence" target="_blank">AdS/CFT correspondence</a>. 
-				We begin with a motivation for holography from the <a href="https://en.wikipedia.org/wiki/Black_hole_thermodynamics#Overview" target="_blank">thermodynamics of black holes</a> demonstrating that their entropy must be proportional to horizon area.
-				 Then, after introducing the machinery from matrix field theory and string theory, we show how the large-N limit of matrix QFTs can be recast into an equivalent string theory-as in Maldacena's <a href="https://arxiv.org/abs/hep-th/9711200" target="_blank">seminal paper</a>. 
-				 From here, we introduce the relevant concepts on both sides of the duality: <a href="https://en.wikipedia.org/wiki/Anti-de_Sitter_space" target="blank">anti-de Sitter space</a> and <a href="https://en.wikipedia.org/wiki/Conformal_field_theory" taget="blank">conformal field theory</a>, and apply this to understand phenomena such as quark confinement and entanglement entropy.
-			    <p> <strong>(Fall 2018)</strong> <a href="Files/Holography/Holography Notes Full.pdf">[PDF]</a> 
-				<a href="Files/Holography/Chapter 1.pdf">[Chapter 1: Black Holes and the Holographic Principle]</a>
-<a href="Files/Holography/Chapter 2.pdf">[Chapter 2: Matrices and Strings]</a>
-<a href="Files/Holography/Chapter 3.pdf">[Chapter 3: Holographic Duality]</a></p>
-	</div>
+			<div class="col-md-10">
+				<h4>Solutions to "String Theory in a Nutshell"</h4>
+				<p>In early graduate school, while still studying string theory, I wanted to get as much reading out of the way as possible. Alongside several books on quantum field theory, I did a cover-to-cover reading of E Kiritsis' "String Theory in a Nutshell" and tried to solve all problems. This is the write up for. Most problems are done, save for various topics in compactification and running of effective couplings, as well as the new edition's great chapter on applied holography. Perhaps I will one day finish these remaining problems. <strong>If you find errors and want me to make corrections, please do reach out over email. Also, if you have solutions to problems I haven't done, please also reach out. I'd love to add them in, of course crediting you.</strong></p>
+				<p><strong>(2019-2020)</strong>
+					<a href="Files/Kiritsis Solutions.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
 	</div>
 
-	<br><br>
-    <hr class="featurette-divider">
-	<h3> Undergrad: </h3>
-
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/lines.png" alt="..."  width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> The Path Integral, Wilson Lines, and Disorder Operators </h4> 
-				My lectures for Prof. <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>'s second-semester <a href=https://sites.google.com/site/philsangyoo/teaching/math817 target="_blank">graduate seminar</a> on the Langlands program. I define the ideas of quantum field theory for an audience of mathematicians. From here, I define the Wilson and `t Hooft line defect operators and elaborate on their relationship to the geometric Satake symmetries acting on both sides of the Langlands correspondence. 
-			    <p> <strong>(Spring 2018)</strong> <a href="Files/Satake Equivalence 1.pdf">[Lecture 1]</a> <a href="Files/Satake Equivalence 2.pdf">[Lecture 2]</a></p>
-			  </div>
-	</div>
-	
-	
-
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/Monopole.png" alt="..."  width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> 3D Monopoles and the Equations of Bogomolny and Nahm </h4> 
-				My final presentation for Prof. <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>'s first <a href=https://sites.google.com/site/philsangyoo/teaching/math815 target="_blank">graduate seminar</a> on the ideas of the geometric Langlands program. 
-				This is introductory paper introduces the ideas of gauge theory for a mathematical audience, and then uses those ideas to define SU(n) monopoles in 3D in terms of translation invariant solutions to the anti-self-dual instanton equations in 4D (see prior <a href="#ADHM">lecture notes</a> on instantons and the ADHM construction). 
-				This study of magnetic monopoles on 3D space serves to motivate the ideas behind the Nahm Transform, which will be explored in greater depth next semester for my senior thesis.
-			    <p> <strong>(Fall 2017)</strong> <a href="Files/3D Monopoles.pdf">[PDF]</a></p>
-			  </div>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/OSFT.png" alt="Open String Field Theory">
+			</div>
+			<div class="col-md-10">
+				<h4>Aspects of Open String Field Theory</h4>
+				<p>Final project and presentation for Prof. <a href="https://www.physics.harvard.edu/people/facpages/yin" target="_blank">Xi Yin</a>'s second semester course on string theory. Here I discuss <a href="https://en.wikipedia.org/wiki/String_field_theory">string field theory</a>, a "second quantized" formalism for dealing with off-shell processes in string theory. This is more involved than the commonly taught "first quantized" on-shell treatment of strings and superstrings. At least for open strings, there is a remarkably simple formulation in terms of Witten's <a href="https://www.sciencedirect.com/science/article/pii/0550321386901550">"cubic" open string field theory</a> (OSFT). In this final paper I give an exposition to this theory, and detail how the standard formalism can be used to recover the Veneziano amplitude, following <a href="https://www.sciencedirect.com/science/article/pii/0550321386902117?via%3Dihub">Giddings</a>. Then, I review Sen's remarkable <a href="https://arxiv.org/abs/hep-th/9912249">paper</a> demonstrating how the simple technique of level-truncation in OSFT can "see" the infamous bosonic string tachyon's potential and equate its minimum with the condensation of the D-brane.</p>
+				<p><strong>(Spring 2020)</strong>
+					<a href="Files/Strings Final Paper.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
 	</div>
 
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/Conjecture.png" alt="..." width="150"></img>
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading">Course Notes: Geometric Langlands and Derived Algebraic Geometry</h4>
-				My set of handwritten course notes for the lecture series of Prof. <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>'s graduate <a href=https://sites.google.com/site/philsangyoo/teaching/math815 target="_blank">seminar course</a> on the Geometric Langlands program, viewed through the lens of <a href=https://en.wikipedia.org/wiki/Derived_algebraic_geometry target="_blank">Derived Algebraic Geometry</a>.
-			    <p> <strong>(Spring, Fall 2017)</strong> <a href="Files/Langlands/815 Geometric Langlands Course Notes.pdf">[Full Notes]</a> <a href="Files/Langlands/GL Part 1.pdf">[Part 1: Categorical Harmonic Analysis]</a>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Kondo.png" alt="Kondo Effect">
+			</div>
+			<div class="col-md-10">
+				<h4>The Kondo Effect, Conformal Field Theory, and Quantum Dots</h4>
+				<p>Final project and presentation for Prof. <a href="https://scholar.harvard.edu/avishwanath" target="_blank">Ashvin Vishwanath</a>'s course on topics in quantum matter. Ken Wilson won the <a href="https://www.nobelprize.org/prizes/physics/1982/summary/" target="_blank">Nobel Prize in 1982</a> for applying his renormalization group (RG) technique to understand the low-temperature "strongly-interacting" regime of a the <a href="https://en.wikipedia.org/wiki/Kondo_effect" target="_blank">Kondo effect</a> in a metal with magnetic impurity. From the modern perspective of studying field theory as a flow from one RG fixed point to another, we study a simple 1+1D version of the Kondo effect, and show how both the noninteracting and strongly-coupled fixed points can be understood in terms of <a href="https://en.wikipedia.org/wiki/Wess%E2%80%93Zumino%E2%80%93Witten_model" target="_blank">WZW conformal field theories</a>. We use this as a jumping-off point to think about how this formalism could shed new light into recent developments in understanding the <a href="https://www.nature.com/articles/526203a" target="_blank">Kondo effect in quantum dots</a>.</p>
+				<p><strong>(Fall 2018)</strong>
+					<a href="Files/Kondo Effect.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/AdSCFT.png" alt="Holographic Duality">
+			</div>
+			<div class="col-md-10">
+				<h4>Holographic Duality and Applications</h4>
+				<p>My set of handwritten notes for Prof. <a href="https://web.mit.edu/physics/people/faculty/liu_hong.html" target="_blank">Hong Liu</a>'s Lectures on (MIT course 8.871) on the <a href="https://en.wikipedia.org/wiki/AdS/CFT_correspondence" target="_blank">AdS/CFT correspondence</a>. We begin with a motivation for holography from the <a href="https://en.wikipedia.org/wiki/Black_hole_thermodynamics#Overview" target="_blank">thermodynamics of black holes</a> demonstrating that their entropy must be proportional to horizon area. Then, after introducing the machinery from matrix field theory and string theory, we show how the large-N limit of matrix QFTs can be recast into an equivalent string theory-as in Maldacena's <a href="https://arxiv.org/abs/hep-th/9711200" target="_blank">seminal paper</a>. From here, we introduce the relevant concepts on both sides of the duality: <a href="https://en.wikipedia.org/wiki/Anti-de_Sitter_space" target="blank">anti-de Sitter space</a> and <a href="https://en.wikipedia.org/wiki/Conformal_field_theory" taget="blank">conformal field theory</a>, and apply this to understand phenomena such as quark confinement and entanglement entropy.</p>
+				<p><strong>(Fall 2018)</strong>
+					<a href="Files/Holography/Holography Notes Full.pdf">[PDF]</a>
+					<a href="Files/Holography/Chapter 1.pdf">[Chapter 1: Black Holes and the Holographic Principle]</a>
+					<a href="Files/Holography/Chapter 2.pdf">[Chapter 2: Matrices and Strings]</a>
+					<a href="Files/Holography/Chapter 3.pdf">[Chapter 3: Holographic Duality]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<h3 class="mt-5">Undergrad:</h3>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/lines.png" alt="Wilson Lines">
+			</div>
+			<div class="col-md-10">
+				<h4>The Path Integral, Wilson Lines, and Disorder Operators</h4>
+				<p>My lectures for Prof. <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>'s second-semester <a href=https://sites.google.com/site/philsangyoo/teaching/math817 target="_blank">graduate seminar</a> on the Langlands program. I define the ideas of quantum field theory for an audience of mathematicians. From here, I define the Wilson and 't Hooft line defect operators and elaborate on their relationship to the geometric Satake symmetries acting on both sides of the Langlands correspondence.</p>
+				<p><strong>(Spring 2018)</strong>
+					<a href="Files/Satake Equivalence 1.pdf">[Lecture 1]</a>
+					<a href="Files/Satake Equivalence 2.pdf">[Lecture 2]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Monopole.png" alt="3D Monopoles">
+			</div>
+			<div class="col-md-10">
+				<h4>3D Monopoles and the Equations of Bogomolny and Nahm</h4>
+				<p>My final presentation for Prof. <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>'s first <a href=https://sites.google.com/site/philsangyoo/teaching/math815 target="_blank">graduate seminar</a> on the ideas of the geometric Langlands program. This is introductory paper introduces the ideas of gauge theory for a mathematical audience, and then uses those ideas to define SU(n) monopoles in 3D in terms of translation invariant solutions to the anti-self-dual instanton equations in 4D (see prior <a href="#ADHM">lecture notes</a> on instantons and the ADHM construction). This study of magnetic monopoles on 3D space serves to motivate the ideas behind the Nahm Transform, which will be explored in greater depth next semester for my senior thesis.</p>
+				<p><strong>(Fall 2017)</strong>
+					<a href="Files/3D Monopoles.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Conjecture.png" alt="Geometric Langlands">
+			</div>
+			<div class="col-md-10">
+				<h4>Course Notes: Geometric Langlands and Derived Algebraic Geometry</h4>
+				<p>My set of handwritten course notes for the lecture series of Prof. <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a>'s graduate <a href=https://sites.google.com/site/philsangyoo/teaching/math815 target="_blank">seminar course</a> on the Geometric Langlands program, viewed through the lens of <a href=https://en.wikipedia.org/wiki/Derived_algebraic_geometry target="_blank">Derived Algebraic Geometry</a>.</p>
+				<p><strong>(Spring, Fall 2017)</strong>
+					<a href="Files/Langlands/815 Geometric Langlands Course Notes.pdf">[Full Notes]</a>
+					<a href="Files/Langlands/GL Part 1.pdf">[Part 1: Categorical Harmonic Analysis]</a>
 					<a href="Files/Langlands/GL Part 2.pdf">[Part 2: Moduli Space of Bundles]</a>
 					<a href="Files/Langlands/GL Part 3.pdf">[Part 3: Geometric Satake]</a>
 					<a href="Files/Langlands/GL Part 4.pdf">[Part 4: Geometric Representation Theory]</a>
-
 					<a href="Files/Langlands/GL Part 5.pdf">[Part 5: Intro to Derived Algebraic Geometry]</a>
-
 					<a href="Files/Langlands/GL Part 6.pdf">[Part 6: Back to Basics]</a>
 					<a href="Files/Langlands/GL Part 7.pdf">[Part 7: Singular Support]</a>
 					<a href="Files/Langlands/GL Part 8.pdf">[Part 8: Revisiting D(Bun_G)]</a>
@@ -666,46 +799,57 @@ Geometric Langlands Correspondence
 					<a href="Files/Langlands/GL Part 10.pdf">[Part 10: Factorization Structures]</a>
 					<a href="Files/Langlands/GL Part 11.pdf">[Part 11: Fundamental Local Equivalence]</a>
 				</p>
-			  </div>
+			</div>
+		</div>
 	</div>
 
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/3pt.png" alt="..." height="100" width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"> 3D Conformal Field Theory and the Ising Model</h4> 
-				A set of lectures given both as a final presentation for my research in CFT over the spring of 2017, as well as a related talk given in the Fall as part of the Yale graduate seminar in representation theory, as an attempt to introduce the ideas of higher-dimensional CFT to a more mathematical audience with some background in the ideas of the Virasoro algebra for the 2D case.
-			    <p> <strong>(Spring, Fall 2017)</strong> <a href="Files/472 CFT.pdf">[Spring Talk]</a> <a href="Files/CFT for Rep Theory Seminar.pdf">[Fall Talk]</a></p>
-			  </div>
-	</div>
-	
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/Lattice.png" alt="..." height="100" width="150"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading">2D Conformal Field Theory and the Ising Model</h4> 
-These lecture notes are from the final presentation given in Professor <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland's</a> graduate seminar in conformal field theory and its applications. The notes are based on the results from a <a href=http://qft.itp.ac.ru/BPZ.pdf target="_blank">paper</a> by Belavin, Polyakov, and Zamolodchikov on the applications of 2D conformal field to various critical systems.
-			    <p> <strong>(Fall 2016)</strong> <a href="Files/2D Ising CFT.pdf">[PDF]</a></p>
-			  </div>
-	</div>
-			
-			<a name = "ADHM"></a>		
-			<div class="media">
-			<div class="pull-left media-top">
-			<img class="img-rounded" src="Files/Lecture 1.png" alt="..." width="150"></img>   
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/3pt.png" alt="3D CFT">
 			</div>
-			<div class="media-body">
-			<h4 class="media-heading">Talks on the ADHM Construction, Hilbert Schemes, and the Heisenberg Algebra</h4>
-	The hardest, most rewarding math class I ever took during my time at Yale was  <a href=http://www.math.stonybrook.edu/~frenkel60/Frenkel/Conference.html target="_blank">Igor Frenkel</a>'s graduate representation theory seminar. 
-	I prepared a series of three one-hour talks, discussing how the <a href=https://en.wikipedia.org/wiki/ADHM_construction target="_blank">ADHM construction</a> gives rise to a <a href=https://en.wikipedia.org/wiki/Moduli_space target="_blank">moduli space</a> of solutions that can be <a href=https://en.wikipedia.org/wiki/Compactification_(mathematics) target="_blank">compactified</a> and <a href=https://en.wikipedia.org/wiki/Resolution_of_singularities target="_blank">resolved</a>. 
-	In particular, although U(1) instantons do not physically exist in a strict sense, the resolved compactification of the moduli space of U(1) instantons is nonempty, and in fact corresponds exactly to the <a href=https://en.wikipedia.org/wiki/Hilbert_scheme target="_blank">Hilbert scheme</a> of points on the complex affine plane.
-	 I discussed their <a href=https://en.wikipedia.org/wiki/Borel%E2%80%93Moore_homology target="_blank">homology</a> rings and show that the algebraic structure is in fact intimately related to the <a href=https://en.wikipedia.org/wiki/Heisenberg_group#Representation_theory target="_blank">Heisenberg algebra</a>. 
-	 This geometric realization is studied, in broad terms, by recognizing  <a href=https://en.wikipedia.org/wiki/Hopf_algebra target="_blank">Hopf algebra</a> structure both in the Heisenberg algebra and in the homology rings of the Hilbert schemes.  
-	<p> <strong>(Fall 2016)</strong> <a href="Files/Lecture 0.pdf">[Review notes on Fiber Bundles]</a>
-	 <a href="Files/Instantons Lecture 1.pdf">[Talk 1]</a> <a href="Files/Instantons Lecture 2.pdf">[Talk 2]</a></p>
-			  </div>
+			<div class="col-md-10">
+				<h4>3D Conformal Field Theory and the Ising Model</h4>
+				<p>A set of lectures given both as a final presentation for my research in CFT over the spring of 2017, as well as a related talk given in the Fall as part of the Yale graduate seminar in representation theory, as an attempt to introduce the ideas of higher-dimensional CFT to a more mathematical audience with some background in the ideas of the Virasoro algebra for the 2D case.</p>
+				<p><strong>(Spring, Fall 2017)</strong>
+					<a href="Files/472 CFT.pdf">[Spring Talk]</a>
+					<a href="Files/CFT for Rep Theory Seminar.pdf">[Fall Talk]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Lattice.png" alt="2D CFT">
+			</div>
+			<div class="col-md-10">
+				<h4>2D Conformal Field Theory and the Ising Model</h4>
+				<p>These lecture notes are from the final presentation given in Professor <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland's</a> graduate seminar in conformal field theory and its applications. The notes are based on the results from a <a href=http://qft.itp.ac.ru/BPZ.pdf target="_blank">paper</a> by Belavin, Polyakov, and Zamolodchikov on the applications of 2D conformal field to various critical systems.</p>
+				<p><strong>(Fall 2016)</strong>
+					<a href="Files/2D Ising CFT.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<a name="ADHM"></a>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Lecture 1.png" alt="ADHM Construction">
+			</div>
+			<div class="col-md-10">
+				<h4>Talks on the ADHM Construction, Hilbert Schemes, and the Heisenberg Algebra</h4>
+				<p>The hardest, most rewarding math class I ever took during my time at Yale was <a href=http://www.math.stonybrook.edu/~frenkel60/Frenkel/Conference.html target="_blank">Igor Frenkel</a>'s graduate representation theory seminar. I prepared a series of three one-hour talks, discussing how the <a href=https://en.wikipedia.org/wiki/ADHM_construction target="_blank">ADHM construction</a> gives rise to a <a href=https://en.wikipedia.org/wiki/Moduli_space target="_blank">moduli space</a> of solutions that can be <a href=https://en.wikipedia.org/wiki/Compactification_(mathematics) target="_blank">compactified</a> and <a href=https://en.wikipedia.org/wiki/Resolution_of_singularities target="_blank">resolved</a>. In particular, although U(1) instantons do not physically exist in a strict sense, the resolved compactification of the moduli space of U(1) instantons is nonempty, and in fact corresponds exactly to the <a href=https://en.wikipedia.org/wiki/Hilbert_scheme target="_blank">Hilbert scheme</a> of points on the complex affine plane. I discussed their <a href=https://en.wikipedia.org/wiki/Borel%E2%80%93Moore_homology target="_blank">homology</a> rings and show that the algebraic structure is in fact intimately related to the <a href=https://en.wikipedia.org/wiki/Heisenberg_group#Representation_theory target="_blank">Heisenberg algebra</a>. This geometric realization is studied, in broad terms, by recognizing <a href=https://en.wikipedia.org/wiki/Hopf_algebra target="_blank">Hopf algebra</a> structure both in the Heisenberg algebra and in the homology rings of the Hilbert schemes.</p>
+				<p><strong>(Fall 2016)</strong>
+					<a href="Files/Lecture 0.pdf">[Review notes on Fiber Bundles]</a>
+					<a href="Files/Instantons Lecture 1.pdf">[Talk 1]</a>
+					<a href="Files/Instantons Lecture 2.pdf">[Talk 2]</a>
+				</p>
+			</div>
+		</div>
 	</div>
 	
 			
@@ -734,80 +878,80 @@ These lecture notes are from the final presentation given in Professor <a href=h
 					</div> -->
 					
 			
-<!-- *************** Mentoring ***************** --> 
-<a name = "mentoring"></a>
-<div class="clearfix"></div>
-<br><br>
-<hr class="featurette-divider">
-<h2> Mentoring </h2>
+</div>
+
+<!-- *************** Mentoring ***************** -->
+<div class="container my-5">
+	<a name="mentoring"></a>
+	<h2 class="section-title">Mentoring</h2>
 
 
-<div class="media">
-	<div class="pull-left media-top">
-	<img class="img-rounded" src="Files/BZhang.jpeg" alt="..."  width="160"></img>
-	</div>
-	  <div class="media-body">
-	    <h4 class="media-heading">Brian Zhang - RSI</h4>
-		I mentored Brian over the summer of 2024 as part of the <a href="https://www.cee.org/research-science-institute" target="_blank">Research Science Institute</a> (RSI) program at MIT. 
-		I worked with him through a directed reading course in the modern theory of deep learning, focusing on the ideas of the neural tangent kernel and maximal update parameterization. Brian performed a sweep over a highly important yet understudied hyperparamter known as the "richness" of a deep neural network. This parameter interpolates between the network behaving as a linear model and the network learning features.   He absorbed a wealth of theoretical information and leveraged it to empirically probe the weight structure changes of deep netorks as the richness parameter is varied. These preliminary studies have the potential to open the black box of neural networks to simpler interpretation. 
-		His final report was among five selected as distinguished written papers. Brian is now an undergrad at MIT 🎉
-
-
-	<p> <strong>(Summer 2024)</strong> <a href="https://www.cee.org/sites/default/files/rsi/Papers/Zhang_Brian_Max_Final.pdf">[Final Paper]</a></p>
-	  </div>
-	</div>
-
-	<div class="media">
-	<div class="pull-left media-top">
-	<img class="img-rounded" src="Files/Laia_Pres.png" alt="..."  width="160"></img>
-	</div>
-	  <div class="media-body">
-	    <h4 class="media-heading">Laia Planas - RSI</h4>
-		I mentored Laia over the summer of 2020 as part of the <a href="https://www.cee.org/research-science-institute" target="_blank">Research Science Institute</a> (RSI) program at MIT. 
-		This was the first remote RSI, due to the COVID19 pandemic. 
-		I worked with her through a directed reading course in undergraduate quantum mechanics and quantum chemistry. 
-		This resulted in her completing a project that made use of graph theoretical methods to extract quantum-mechanical properties of carbon fullerene isomers.
-		Laia is now an undergrad at the University of Barcelona 🎉
-	<p> <strong>(Summer 2020)</strong> <a href="Files/Laia_Final_Paper.pdf">[Final Paper]</a></p>
-	  </div>
-	</div>
-
-	<div class="media">
-	<div class="pull-left media-top">
-	<img class="img-rounded" src="Files/Dylan.png" alt="..."  width="160"></img>  
-	</div>
-	  <div class="media-body">
-	    <h4 class="media-heading">Dylan Raphael - RSI</h4>
-		I mentored Dylan over the summer of 2019, as part of the <a href="https://www.cee.org/research-science-institute" target="_blank">Research Science Institute</a> (RSI) program at MIT. 
-		I worked him through a directed reading course in undergraduate quantum mechanics and multilinear algebra, culminating in the introduction of tensor networks as a tool to understand interacting, many-body quantum systems. 
-		He developed a computational approach in the Julia programming language to study the phase transition of the <em>tricritical quantum Ising model</em>.
-		Dylan is now an undergrad at MIT 🎉
-	<p> <strong>(Summer 2019)</strong> <a href="https://youtu.be/z3MhLygobK4" target="_blank">[Final Presentation]</a></p>
-	  </div>
-	</div>
-		
-	<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-rounded" src="Files/ClassPic.png" alt="..."  width="160", height=auto></img>   
-			  </div>
-			  <p>
-			  <div class="media-body">
-			    <h4 class="media-heading">Perimeter Institute ISSYP Mentorship</h4> 
-				Lecture that I gave to the high school students participating in the Perimeter Institute's International Summer School for Young Physicists (<a href="http://www.perimeterinstitute.ca/outreach/students/programs/international-summer-school-young-physicists" target="_blank">ISSYP</a>). 
-				Introduction of manifolds and vector fields to students with calculus background.
-				 Covered linear algebra topics such as direct sums and tensor products of vector spaces and co/contravariance. 
-				 The end goal was to motivate the intuition behind the idea of a Lie Algebra/Lie Derivative in terms of flows along vector fields. 
-				 The attached lecture sadly has no audio.
-			 <p> <strong>(Summer 2016)</strong> <a href="https://youtu.be/59rMDdHkz5s" target="_blank">[Lecture]</a></p>
-			  </div>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/BZhang.jpeg" alt="Brian Zhang">
 			</div>
+			<div class="col-md-10">
+				<h4>Brian Zhang - RSI</h4>
+				<p>I mentored Brian over the summer of 2024 as part of the <a href="https://www.cee.org/research-science-institute" target="_blank">Research Science Institute</a> (RSI) program at MIT. I worked with him through a directed reading course in the modern theory of deep learning, focusing on the ideas of the neural tangent kernel and maximal update parameterization. Brian performed a sweep over a highly important yet understudied hyperparamter known as the "richness" of a deep neural network. This parameter interpolates between the network behaving as a linear model and the network learning features. He absorbed a wealth of theoretical information and leveraged it to empirically probe the weight structure changes of deep netorks as the richness parameter is varied. These preliminary studies have the potential to open the black box of neural networks to simpler interpretation. His final report was among five selected as distinguished written papers. Brian is now an undergrad at MIT 🎉</p>
+				<p><strong>(Summer 2024)</strong>
+					<a href="https://www.cee.org/sites/default/files/rsi/Papers/Zhang_Brian_Max_Final.pdf">[Final Paper]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Laia_Pres.png" alt="Laia Planas">
+			</div>
+			<div class="col-md-10">
+				<h4>Laia Planas - RSI</h4>
+				<p>I mentored Laia over the summer of 2020 as part of the <a href="https://www.cee.org/research-science-institute" target="_blank">Research Science Institute</a> (RSI) program at MIT. This was the first remote RSI, due to the COVID19 pandemic. I worked with her through a directed reading course in undergraduate quantum mechanics and quantum chemistry. This resulted in her completing a project that made use of graph theoretical methods to extract quantum-mechanical properties of carbon fullerene isomers. Laia is now an undergrad at the University of Barcelona 🎉</p>
+				<p><strong>(Summer 2020)</strong>
+					<a href="Files/Laia_Final_Paper.pdf">[Final Paper]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/Dylan.png" alt="Dylan Raphael">
+			</div>
+			<div class="col-md-10">
+				<h4>Dylan Raphael - RSI</h4>
+				<p>I mentored Dylan over the summer of 2019, as part of the <a href="https://www.cee.org/research-science-institute" target="_blank">Research Science Institute</a> (RSI) program at MIT. I worked him through a directed reading course in undergraduate quantum mechanics and multilinear algebra, culminating in the introduction of tensor networks as a tool to understand interacting, many-body quantum systems. He developed a computational approach in the Julia programming language to study the phase transition of the <em>tricritical quantum Ising model</em>. Dylan is now an undergrad at MIT 🎉</p>
+				<p><strong>(Summer 2019)</strong>
+					<a href="https://youtu.be/z3MhLygobK4" target="_blank">[Final Presentation]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/ClassPic.png" alt="Perimeter Institute">
+			</div>
+			<div class="col-md-10">
+				<h4>Perimeter Institute ISSYP Mentorship</h4>
+				<p>Lecture that I gave to the high school students participating in the Perimeter Institute's International Summer School for Young Physicists (<a href="http://www.perimeterinstitute.ca/outreach/students/programs/international-summer-school-young-physicists" target="_blank">ISSYP</a>). Introduction of manifolds and vector fields to students with calculus background. Covered linear algebra topics such as direct sums and tensor products of vector spaces and co/contravariance. The end goal was to motivate the intuition behind the idea of a Lie Algebra/Lie Derivative in terms of flows along vector fields. The attached lecture sadly has no audio.</p>
+				<p><strong>(Summer 2016)</strong>
+					<a href="https://youtu.be/59rMDdHkz5s" target="_blank">[Lecture]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 					
-<!-- *************** Books ***************** --> 
-<a name = "books"></a>
-<div class="clearfix"></div>
-<br><br>
-<hr class="featurette-divider">
-<h2> Books </h2>
+</div>
+
+<!-- *************** Books ***************** -->
+<div class="container my-5">
+	<a name="books"></a>
+	<h2 class="section-title">Books</h2>
 
   			<!-- <div class="media">
   			  <div class="pull-left media-top">
@@ -824,38 +968,78 @@ These lecture notes are from the final presentation given in Professor <a href=h
   			  </div>
   		  </div>
 			 -->
-			<div class="media">
-			  <div class="pull-left media-top">
-			  <img class="img-circle" src="Files/SquareCover.png" alt="..." height="150" width="160"></img>   
-			  </div>
-			  <p>
-			  <div class="media-body">
-			    <h4 class="media-heading">Complex Analysis: In Dialogue</h4> 
-	A book I wrote back in high school on complex analysis. It was initially a set of notes written as a result of self-study over the Summer of 2013. Gradually, it grew into a larger pedagogical work. 
-	The dialogue of the book is in the style of <a href="https://en.wikipedia.org/wiki/Johann_Joseph_Fux" target="_blank">Johann Joseph Fux's</a> work <a href="https://www.amazon.com/Study-Counterpoint-Johann-Joseph-Parnassum/dp/0393002772" target="_blank"><em>Gradus ad Parnassum</em></a>, a formal conversation between teacher and student at length on a large subject. I swear I also had other hobbies when I was seventeen. You can buy it on Amazon <a href="https://www.amazon.com/Complex-Analysis-Dialogue-Alexander-Atanasov/dp/1492864196" target="_blank">here</a>.
-			    <p> <strong>(Fall 2013)</strong> <a href="Files/CAID.pdf">[PDF]</a></p>
-			  </div>
-		  </div>
-		  
-			 <div class="media"> 
-			  <div class="pull-left media-top">
-			<p>
-			  <img class="img-circle" src="Files/SquareColor.png" alt="..." height="150" width="160"></img>   
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading">Complex Analysis: Appendix of Color Plots</h4> 
-				Accompanying color plots for students and readers to be able to visualize some of the complex functions mentioned in the above work. 
-				Color plots of complex functions are much more in-vogue now than they were a decade ago. I like to think that I played a small part. 
-				 You can buy it on Amazon <a href="http://www.amazon.com/dp/1492992755/" target="_blank">here</a>.
-			    <p> <strong>(Fall 2013)</strong> <a href="Files/Appendix.pdf">[PDF]</a></p>
-			  </div>
-		  </div>
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/SquareCover.png" alt="Complex Analysis Book" style="border-radius: 50%;">
+			</div>
+			<div class="col-md-10">
+				<h4>Complex Analysis: In Dialogue</h4>
+				<p>A book I wrote back in high school on complex analysis. It was initially a set of notes written as a result of self-study over the Summer of 2013. Gradually, it grew into a larger pedagogical work. The dialogue of the book is in the style of <a href="https://en.wikipedia.org/wiki/Johann_Joseph_Fux" target="_blank">Johann Joseph Fux's</a> work <a href="https://www.amazon.com/Study-Counterpoint-Johann-Joseph-Parnassum/dp/0393002772" target="_blank"><em>Gradus ad Parnassum</em></a>, a formal conversation between teacher and student at length on a large subject. I swear I also had other hobbies when I was seventeen. You can buy it on Amazon <a href="https://www.amazon.com/Complex-Analysis-Dialogue-Alexander-Atanasov/dp/1492864196" target="_blank">here</a>.</p>
+				<p><strong>(Fall 2013)</strong>
+					<a href="Files/CAID.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="Files/SquareColor.png" alt="Complex Analysis Appendix" style="border-radius: 50%;">
+			</div>
+			<div class="col-md-10">
+				<h4>Complex Analysis: Appendix of Color Plots</h4>
+				<p>Accompanying color plots for students and readers to be able to visualize some of the complex functions mentioned in the above work. Color plots of complex functions are much more in-vogue now than they were a decade ago. I like to think that I played a small part. You can buy it on Amazon <a href="http://www.amazon.com/dp/1492992755/" target="_blank">here</a>.</p>
+				<p><strong>(Fall 2013)</strong>
+					<a href="Files/Appendix.pdf">[PDF]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 			
-	<!-- ***************** Footer ********************** -->
-	<hr class="featurette-divider">
-	<footer>
-		<p class="text-center"> Updated April 2025 </p>
-	</footer>
 </div>
+
+<!-- ***************** Footer ********************** -->
+<footer class="text-center">
+	<div class="container">
+		<p class="mb-0">Updated April 2025</p>
+	</div>
+</footer>
+
+<!-- Bootstrap 5 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Dark Mode Toggle Script -->
+<script>
+	const themeToggle = document.getElementById('themeToggle');
+	const htmlElement = document.documentElement;
+	const toggleIcon = themeToggle.querySelector('i');
+
+	// Load saved theme from localStorage
+	const savedTheme = localStorage.getItem('theme');
+	if (savedTheme === 'dark') {
+		htmlElement.setAttribute('data-theme', 'dark');
+		toggleIcon.classList.remove('fa-moon');
+		toggleIcon.classList.add('fa-sun');
+	}
+
+	// Toggle theme on button click
+	themeToggle.addEventListener('click', () => {
+		const currentTheme = htmlElement.getAttribute('data-theme');
+
+		if (currentTheme === 'dark') {
+			htmlElement.removeAttribute('data-theme');
+			localStorage.setItem('theme', 'light');
+			toggleIcon.classList.remove('fa-sun');
+			toggleIcon.classList.add('fa-moon');
+		} else {
+			htmlElement.setAttribute('data-theme', 'dark');
+			localStorage.setItem('theme', 'dark');
+			toggleIcon.classList.remove('fa-moon');
+			toggleIcon.classList.add('fa-sun');
+		}
+	});
+</script>
 </body>
 </html>
