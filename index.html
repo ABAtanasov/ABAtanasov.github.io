@@ -27,19 +27,6 @@
 			--section-title: #2c3e50;
 		}
 
-		[data-theme="dark"] {
-			--bg-primary: #1a1a1a;
-			--bg-secondary: #2d2d2d;
-			--card-bg: #2d2d2d;
-			--card-border: #404040;
-			--text-dark: #e0e0e0;
-			--text-light: #b0b0b0;
-			--navbar-bg: rgba(20, 20, 20, 0.98);
-			--navbar-text: #fff;
-			--section-title: #ffffff;
-			--border-color: #404040;
-		}
-
 		body {
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 			color: var(--text-dark);
@@ -126,6 +113,7 @@
 			border-radius: 6px;
 			width: 100%;
 			height: auto;
+			margin-top: 1rem;
 		}
 
 		.publication-card h4 {
@@ -170,23 +158,6 @@
 			border-top: 1px solid var(--border-color);
 		}
 
-		/* Dark mode toggle button */
-		.theme-toggle {
-			background: transparent;
-			border: 1px solid var(--navbar-text);
-			border-radius: 6px;
-			padding: 0.4rem 0.8rem;
-			color: var(--navbar-text);
-			cursor: pointer;
-			transition: all 0.3s ease;
-			font-size: 1.1rem;
-			display: none; /* Hidden for now until images are optimized for dark mode */
-		}
-
-		.theme-toggle:hover {
-			background: rgba(255, 255, 255, 0.1);
-		}
-
 		/* Mobile responsive hero */
 		@media (max-width: 768px) {
 			.hero-section {
@@ -223,11 +194,6 @@
 				<li class="nav-item"><a class="nav-link" href="https://arxiv.org/a/atanasov_a_1.html"><i class="fa-solid fa-file-pdf"></i> arXiv</a></li>
 				<li class="nav-item"><a class="nav-link" href="https://github.com/abatanasov"><i class="fa-brands fa-github"></i></a></li>
 				<li class="nav-item"><a class="nav-link" href="http://linkedin.com/in/alexatanasov"><i class="fa-brands fa-linkedin"></i></a></li>
-				<li class="nav-item">
-					<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-						<i class="fa-solid fa-moon"></i>
-					</button>
-				</li>
 			</ul>
 		</div>
 	</div>
@@ -253,25 +219,43 @@
 			
 		
 <!-- <h3 class="media-heading">Overview:</h3> -->
-	<p> I am a researcher in industry. I recently completed my  PhD  in theoretical physics at Harvard, where I was very fortunate to be advised by <a href="https://kempnerinstitute.harvard.edu/people/our-people/cengiz-pehlevan/" target="_blank">Cengiz Pehlevan</a>. 
-		My research is on developing a <strong><em>science of deep learning</em></strong> to inform the design of AI systems that are more performant, reliable, and interpretable. I approach this by leveraging statistical physics, random matrix theory, and extensive empirical studies on real models and datasets. Key ideas include the <a href="https://en.wikipedia.org/wiki/Neural_tangent_kernel" target="_blank">neural tangent kernel</a>, <a href="https://www.microsoft.com/en-us/research/blog/%C2%B5transfer-a-technique-for-hyperparameter-tuning-of-enormous-neural-networks/" target="_blank">maximal update parameterization</a> (μP), and the <a href="https://arxiv.org/abs/1812.07956", target="_blank">dichotomy between rich and lazy training</a>. An important application of these ideas is to the study of <a href="https://en.wikipedia.org/wiki/Neural_scaling_law" target="_blank">neural scaling laws</a>. See this <a href="Files/Scaling_Laws_Note.pdf">note</a> for a 2-page derivation of key scaling laws obtained in my PhD. 	
-		My work was funded by the  <a href="https://ndseg.sysplus.com/NDSEG/Awardees/FY2019" target="_blank">NDSEG Fellowship</a> (2019-2022) and by the <a href="https://hertzfoundation.org/fellows/fellow-profile/11341/Alex-Atanasov" target="_blank">Hertz Fellowship</a> (2019-2024). 
+	<p> I am a researcher at <a href="https://www.deshaw.com/" target="_blank">D. E. Shaw &amp; Co</a>. If you're a recruiter for quantiative finance, I am not looking for a job. 
+	</p>
+
+	<p> I completed my  PhD  in theoretical physics at Harvard, where I was very fortunate to be advised by <a href="https://kempnerinstitute.harvard.edu/people/our-people/cengiz-pehlevan/" target="_blank">Cengiz Pehlevan</a>.
+		My research is on developing a <strong><em>science of deep learning</em></strong> to inform the design of AI systems that are more performant, reliable, and interpretable. I believe that <a href="https://arxiv.org/abs/2604.21691">there will be a scientific theory of deep learning</a>.
+	</p>
+	<p>
+		I pursue this by leveraging statistical physics, random matrix theory, and (most importantly!) extensive empirical studies on real models and datasets. My key research contributions are:
+		
+		<ul>
+			<li>My empirical work identified some of the earliest signs of the striking consistency of μ-parameterization across model sizes. The empirical work I'm most proud of is the thorough sweep over the hyperparameter that controls feature learning, identifying many phases of deep network training. </li>
+			<li>My theoretical work leveraged free probability and random matrix theory to prove novel "master theorems" that characterize high-dimensional linear models, which are highly representative of how actual neural networks learn. If you want a single "theorem to rule them all", it's the two-point equivalence we derive here. </li>
+			<li>An important application of these ideas is to the study of <a href="https://en.wikipedia.org/wiki/Neural_scaling_law" target="_blank">neural scaling laws</a>. See this <a href="Files/Scaling_Laws_Note.pdf">note</a> for a 2-page derivation of key scaling laws obtained in my PhD.</li>
+			<li>I identified the <strong>silent alignment</strong> effect, in which neural networks learn representations without their loss dropping.</li>
+			<li>I proposed the <strong>Source Hypothesis</strong>: feature learning only improves neural scaling laws when the task lies outside the Hilbert space of the network's tangent kernel.</li>
+			
+		</ul>
+		
+
+		
+		
+		
+		My PhD work was funded by the  <a href="https://ndseg.sysplus.com/NDSEG/Awardees/FY2019" target="_blank">NDSEG Fellowship</a> (2019-2022) and by the <a href="https://hertzfoundation.org/fellows/fellow-profile/11341/Alex-Atanasov" target="_blank">Hertz Fellowship</a> (2019-2024).
 	</p>
 	<p>
 		Prior to this, I had the pleasure of collaborating with <a href="https://www.physics.harvard.edu/people/facpages/strominger" target="_blank">Andy Strominger</a> and colleagues on topics adjacent to string theory and quantum field theory.  Also while in graduate school, I consulted for two biotech firms:  <a href="https://protein-evolution.com/" target="_blank">Protein Evolution</a> and <a href=" https://www.quantum-si.com/" target="_blank">Quantum Si</a> as a machine learning scientist. I've also worked at <a href="https://www.janestreet.com/quantitative-research/" target="_blank">Jane Street</a> as a quantiative research intern, at Google applying deep learning to computer vision, and at the  <a href="http://perimeterinstitute.ca/" target="_blank">Perimeter Institute</a> under <a href="https://perimeterinstitute.ca/people/erik-schnetter" target="_blank">Erik Schnetter</a> on tackling the  <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank">curse of dimensionality</a> in numerical partial differential equations.
 	</p>
 	<p>
 	I received my M.S. in mathematics and B.S. in physics from Yale in 2018.
-	There, I studied <a href=https://en.wikipedia.org/wiki/Conformal_field_theory target="_blank">conformal field theories</a>  under  <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland</a>, using the <a href=http://bootstrapcollaboration.com/ target="_blank">bootstrap program</a>. I also studied computational neuroscience in <a href="https://murraylab.org/" target="_blank">John Murray's</a> lab, where we built <a href="https://github.com/murraylab/PsychRNN" taget="_blank">tools</a> to study working memory in <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank">recurrent neural networks</a>. My master's thesis in pure math was under <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a> on connections of quantum field theory to the <a href="https://ncatlab.org/nlab/show/geometric+Langlands+correspondence">Langlands program</a>. 
-	<!-- . Concurrently, I had the opportunity to learn from <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a> about the connections between quantum field theory and the Langlands program.  -->
+	There, I studied <a href=https://en.wikipedia.org/wiki/Conformal_field_theory target="_blank">conformal field theories</a>  under  <a href=https://www.ias.edu/scholars/david-poland target="_blank">David Poland</a>, using the <a href=http://bootstrapcollaboration.com/ target="_blank">bootstrap program</a>. I also studied computational neuroscience in <a href="https://murraylab.org/" target="_blank">John Murray's</a> lab, where we built <a href="https://github.com/murraylab/PsychRNN" target="_blank">tools</a> to study working memory in <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank">recurrent neural networks</a>. My master's thesis in pure math was under <a href=https://sites.google.com/site/philsangyoo/home target="_blank">Philsang Yoo</a> on connections of quantum field theory to the <a href="https://ncatlab.org/nlab/show/geometric+Langlands+correspondence">Langlands program</a>. 
+
 	</p>
 
 	<p>My earliest exposure to scientific research was under <a href="http://www2.mitre.org/tech/nanotech/ourwork/staff.html" target="_blank">Dr. James Ellenbogen</a> at MITRE, and with Drs. John Dell and Jonathan Osborne at <a href="https://en.wikipedia.org/wiki/Thomas_Jefferson_High_School_for_Science_and_Technology">Thomas Jefferson High School</a>. 
 	</p>
 	
 	
- <!-- , connecting high-level android code to low-level C++ libraries for running and <a href="https://www.tensorflow.org/performance/quantization" target="_blank">quantizing</a> the underlying <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a>-based networks. -->
-
 	
 
 			<div class="text-center mt-4">
@@ -289,6 +273,23 @@
 <div class="container my-5">
 	<a name="papers"></a>
 	<h2 class="section-title">Publications</h2>
+
+
+	<div class="publication-card">
+		<div class="row">
+			<div class="col-4 col-md-2">
+				<img src="Files/LearningMechanics.png" alt="There Will Be a Scientific Theory of Deep Learning">
+			</div>
+			<div class="col-8 col-md-10">
+				<h4>There Will Be a Scientific Theory of Deep Learning</h4>
+				<p>A position paper co-authored with <a href="https://james-simon.github.io/" target="_blank">Jamie Simon</a>, <a href="https://danielkunin.com/" target="_blank">Daniel Kunin</a>, <a href="https://www.enricboix.com/" target="_blank">Enric Boix-Adserà</a>, <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://sites.google.com/view/arthurjacot" target="_blank">Arthur Jacot</a>, and nine other collaborators. We argue that a scientific theory of deep learning is emerging, and propose the name <em>learning mechanics</em> for it: a falsifiable, predictive mechanics of the training process. We pull together five strands of recent work that jointly point in this direction: solvable idealized settings, tractable infinite-size limits, simple empirical laws, theories of hyperparameters, and universal training behaviors. The paper points to important open directions and hosts companion materials at <a href="https://learningmechanics.pub" target="_blank">learningmechanics.pub</a>.</p>
+				<p><strong>(2026)</strong>
+					<a href="https://arxiv.org/abs/2604.21691">[arXiv]</a>
+					<a href="https://learningmechanics.pub">[Companion site]</a>
+				</p>
+			</div>
+		</div>
+	</div>
 
 
 	<div class="publication-card">
@@ -314,8 +315,6 @@
 		</div>
 	</div>
 
-		
-
 
 	<div class="publication-card">
 		<div class="row">
@@ -325,14 +324,15 @@
 			<div class="col-8 col-md-10">
 				<h4>Two-Point Deterministic Equivalence for Stochastic Gradient Dynamics in Linear Models</h4>
 				<p>Work with <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a>, <a href="https://cypaquette.github.io/" target="_blank">Courtney Paquette</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. Using random matrix theory, we derive a novel deterministic equivalence. Essentially all results (up to that point) on models of neural scaling laws in high-dimensional regression follow directly from this equivalence. This accounts for finite training time, finite dataset size, finite parameter count, and SGD effects jointly.</p>
-				<p><strong>(2025) <em>ICML 2025 Workshop on High-dimensional Learning Dynamics</em></strong>
+				<p><strong>(2025) <em>Advances in Theoretical and Mathematical Physics</em>; <em>ICML 2025 Workshop on High-dimensional Learning Dynamics</em></strong>
+					<a href="https://intlpress.com/JDetail/2043359039483547650">[Journal Link]</a>
 					<a href="https://openreview.net/forum?id=iAv9sDEeuE">[OpenReview]</a>
 					<a href="https://arxiv.org/abs/2502.05074">[arXiv]</a>
 				</p>
 			</div>
 		</div>
 	</div>
-		
+
 
 	<div class="publication-card">
 		<div class="row">
@@ -393,7 +393,9 @@
 				<h4>Scaling and Renormalization in High-Dimensional Regression</h4>
 				<p>Work with <a href="https://jzv.io/" target="_blank">Jacob Zavatone-Veth</a> and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We introduce the basic concepts of random matrix theory and free probability necessary to characterize the performance of high-dimensional regression across a variety of machine learning models. By applying the <em>S</em>-transform of free probability, we provide a straightforward derivation of the average case behavior of many of the quantities of interest in these settings. We also provide novel formulas for the generalization error of general random feature models and fine-grained bias-variance decompositions in that setting. We go on to study the scaling properties of random feature models, and the effects of weight structure and additive feature noise. Our results extend and provide a unifying perspective on earlier models of neural scaling laws.</p>
 				<p><strong>(2024) <em>Journal of Statistical Mechanics</em></strong>
+					<a href="https://iopscience.iop.org/article/10.1088/1742-5468/ae4bba">[Journal Link]</a>
 					<a href="https://arxiv.org/abs/2405.00592">[arXiv]</a>
+					<a href="https://techxplore.com/news/2026-05-simple-physics-ai.html">[Press]</a>
 				</p>
 			</div>
 		</div>
@@ -422,7 +424,7 @@
 			</div>
 			<div class="col-8 col-md-10">
 				<h4>Maximal Update (μP) Networks Are Consistent Across Widths At Realistic Scales</h4>
-				<p>Work with <a href="https://nikhilvyas.github.io/" target="_blank">Nikhil Vyas</a>, <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://openreview.net/profile?id=~Depen_Morwani1" target="_blank">Depen Morwani</a>, <a href="https://www.linkedin.com/in/sabarish-sainathan-911019152" target="_blank">Sabarish Sainathan</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We perform an extensive empirical study on realistic networks in the "maximal update parameterization" (<a href="https://arxiv.org/abs/2011.14522" taget="_blank">μP</a>) of Greg Yang (introduced by other authors under the name "mean field parameterization)". In this parameterization, networks can learn features even at infinite width. We study networks across realistic datasets for vision nets on (CIFAR-5m, ImageNet) and transformer models on (Wikitext-103, C4). Wider networks are seen to perform better, consistent with prior works. We show that not only do loss curves of realistically wide networks converge to a limiting behavior corresponding to the infinite width limit, but that the individual network outputs, internal representations, and dynamical phenomena also behave nearly identically across large widths. We find that this is robust across architectures and datasets in the setting where each example is new, but that when frequently repeating examples, it can be broken. Finally, we develop a new spectral perspective on the bias that can make narrower width networks perform worse, even after ensembling.</p>
+				<p>Work with <a href="https://nikhilvyas.github.io/" target="_blank">Nikhil Vyas</a>, <a href="https://blakebordelon.github.io/" target="_blank">Blake Bordelon</a>, <a href="https://openreview.net/profile?id=~Depen_Morwani1" target="_blank">Depen Morwani</a>, <a href="https://www.linkedin.com/in/sabarish-sainathan-911019152" target="_blank">Sabarish Sainathan</a>, and <a href="https://pehlevan.seas.harvard.edu/people/cengiz-pehlevan" target="_blank">Cengiz Pehlevan</a>. We perform an extensive empirical study on realistic networks in the "maximal update parameterization" (<a href="https://arxiv.org/abs/2011.14522" target="_blank">μP</a>) of Greg Yang (introduced by other authors under the name "mean field parameterization)". In this parameterization, networks can learn features even at infinite width. We study networks across realistic datasets for vision nets on (CIFAR-5m, ImageNet) and transformer models on (Wikitext-103, C4). Wider networks are seen to perform better, consistent with prior works. We show that not only do loss curves of realistically wide networks converge to a limiting behavior corresponding to the infinite width limit, but that the individual network outputs, internal representations, and dynamical phenomena also behave nearly identically across large widths. We find that this is robust across architectures and datasets in the setting where each example is new, but that when frequently repeating examples, it can be broken. Finally, we develop a new spectral perspective on the bias that can make narrower width networks perform worse, even after ensembling.</p>
 				<p><strong>(2023) <em>NeurIPS 2023</em></strong>
 					<a href="https://openreview.net/forum?id=LTdfYIvbHc">[OpenReview]</a>
 					<a href="https://arxiv.org/abs/2305.18411">[arXiv]</a>
@@ -1009,43 +1011,11 @@
 <!-- ***************** Footer ********************** -->
 <footer class="text-center">
 	<div class="container">
-		<p class="mb-0">Updated April 2025</p>
+		<p class="mb-0">Updated May 2026</p>
 	</div>
 </footer>
 
 <!-- Bootstrap 5 JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Dark Mode Toggle Script -->
-<script>
-	const themeToggle = document.getElementById('themeToggle');
-	const htmlElement = document.documentElement;
-	const toggleIcon = themeToggle.querySelector('i');
-
-	// Load saved theme from localStorage
-	const savedTheme = localStorage.getItem('theme');
-	if (savedTheme === 'dark') {
-		htmlElement.setAttribute('data-theme', 'dark');
-		toggleIcon.classList.remove('fa-moon');
-		toggleIcon.classList.add('fa-sun');
-	}
-
-	// Toggle theme on button click
-	themeToggle.addEventListener('click', () => {
-		const currentTheme = htmlElement.getAttribute('data-theme');
-
-		if (currentTheme === 'dark') {
-			htmlElement.removeAttribute('data-theme');
-			localStorage.setItem('theme', 'light');
-			toggleIcon.classList.remove('fa-sun');
-			toggleIcon.classList.add('fa-moon');
-		} else {
-			htmlElement.setAttribute('data-theme', 'dark');
-			localStorage.setItem('theme', 'dark');
-			toggleIcon.classList.remove('fa-moon');
-			toggleIcon.classList.add('fa-sun');
-		}
-	});
-</script>
 </body>
 </html>
