@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Atanasov</title>
     <meta name="description" content="Alex Atanasov — researcher developing a science of deep learning. PhD in theoretical physics from Harvard, advised by Cengiz Pehlevan. Work on neural scaling laws, the neural tangent kernel, and feature learning.">
@@ -70,6 +71,10 @@
 			--navbar-bg: rgba(50, 50, 50, 0.98);
 			--navbar-text: #fff;
 			--section-title: #2c3e50;
+		}
+
+		html {
+			scroll-padding-top: 70px;
 		}
 
 		body {
@@ -214,9 +219,15 @@
 				font-size: 2.5rem;
 			}
 
-			.publication-card img, .profile-img {
+			.publication-card img {
 				width: 80%;
 				height: auto;
+			}
+
+			.profile-img {
+				max-width: 200px;
+				display: block;
+				margin: 0 auto;
 			}
 		}
 		</style>
@@ -255,8 +266,7 @@
 <main>
 
 <!-- *************** About Me ***************** -->
-<div class="container my-5">
-	<a name="about"></a>
+<div id="about" class="container my-5">
 	<h2 class="section-title">About Me</h2>
 	<div class="row">
 		<div class="col-12 col-sm-4 col-md-2 mb-4">
@@ -266,11 +276,11 @@
 			
 		
 <!-- <h3 class="media-heading">Overview:</h3> -->
-	<p> I am a researcher at <a href="https://www.deshaw.com/" target="_blank" rel="noopener noreferrer">D. E. Shaw &amp; Co</a>. If you're a recruiter for quantiative finance, I am not looking for a job.
+	<p> I am a researcher at <a href="https://www.deshaw.com/" target="_blank" rel="noopener noreferrer">D. E. Shaw &amp; Co</a>. If you're a recruiter for quantitative finance, I am not looking for a job.
 	</p>
 
 	<p> I completed my  PhD  in theoretical physics at Harvard, where I was very fortunate to be advised by <a href="https://kempnerinstitute.harvard.edu/people/our-people/cengiz-pehlevan/" target="_blank" rel="noopener noreferrer">Cengiz Pehlevan</a>.
-		My research is on developing a <strong><em>science of deep learning</em></strong> to inform the design of AI systems that are more performant, reliable, and interpretable. I believe that <a href="https://arxiv.org/abs/2604.21691">there will be a scientific theory of deep learning</a>.
+		My research is on developing a <strong><em>science of deep learning</em></strong> to inform the design of AI systems that are more performant, reliable, and interpretable. I believe that <a href="https://arxiv.org/abs/2604.21691" target="_blank" rel="noopener noreferrer">there will be a scientific theory of deep learning</a>.
 	</p>
 	<p>
 		I pursue this by leveraging statistical physics, random matrix theory, and (most importantly!) extensive empirical studies on real models and datasets. My key research contributions are:
@@ -286,7 +296,7 @@
 		My PhD work was funded by the  <a href="https://ndseg.sysplus.com/NDSEG/Awardees/FY2019" target="_blank" rel="noopener noreferrer">NDSEG Fellowship</a> (2019-2022) and by the <a href="https://hertzfoundation.org/fellows/fellow-profile/11341/Alex-Atanasov" target="_blank" rel="noopener noreferrer">Hertz Fellowship</a> (2019-2024).
 	</p>
 	<p>
-		Prior to this, I had the pleasure of collaborating with <a href="https://www.physics.harvard.edu/people/facpages/strominger" target="_blank" rel="noopener noreferrer">Andy Strominger</a> and colleagues on topics adjacent to string theory and quantum field theory.  Also while in graduate school, I consulted for two biotech firms:  <a href="https://protein-evolution.com/" target="_blank" rel="noopener noreferrer">Protein Evolution</a> and <a href="https://www.quantum-si.com/" target="_blank" rel="noopener noreferrer">Quantum Si</a> as a machine learning scientist. I've also worked at <a href="https://www.janestreet.com/quantitative-research/" target="_blank" rel="noopener noreferrer">Jane Street</a> as a quantiative research intern, at Google applying deep learning to computer vision, and at the  <a href="http://perimeterinstitute.ca/" target="_blank" rel="noopener noreferrer">Perimeter Institute</a> under <a href="https://perimeterinstitute.ca/people/erik-schnetter" target="_blank" rel="noopener noreferrer">Erik Schnetter</a> on tackling the  <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank" rel="noopener noreferrer">curse of dimensionality</a> in numerical partial differential equations.
+		Prior to this, I had the pleasure of collaborating with <a href="https://www.physics.harvard.edu/people/facpages/strominger" target="_blank" rel="noopener noreferrer">Andy Strominger</a> and colleagues on topics adjacent to string theory and quantum field theory.  Also while in graduate school, I consulted for two biotech firms:  <a href="https://protein-evolution.com/" target="_blank" rel="noopener noreferrer">Protein Evolution</a> and <a href="https://www.quantum-si.com/" target="_blank" rel="noopener noreferrer">Quantum Si</a> as a machine learning scientist. I've also worked at <a href="https://www.janestreet.com/quantitative-research/" target="_blank" rel="noopener noreferrer">Jane Street</a> as a quantitative research intern, at Google applying deep learning to computer vision, and at the  <a href="http://perimeterinstitute.ca/" target="_blank" rel="noopener noreferrer">Perimeter Institute</a> under <a href="https://perimeterinstitute.ca/people/erik-schnetter" target="_blank" rel="noopener noreferrer">Erik Schnetter</a> on tackling the  <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank" rel="noopener noreferrer">curse of dimensionality</a> in numerical partial differential equations.
 	</p>
 	<p>
 	I received my M.S. in mathematics and B.S. in physics from Yale in 2018.
@@ -311,8 +321,7 @@
 </div>
 			
 <!-- *************** Papers ***************** -->
-<div class="container my-5">
-	<a name="papers"></a>
+<div id="papers" class="container my-5">
 	<h2 class="section-title">Publications</h2>
 
 
@@ -661,8 +670,7 @@
 </div>
 
 <!-- *************** Lectures ***************** -->
-<div class="container my-5">
-	<a name="lectures"></a>
+<div id="lectures" class="container my-5">
 	<h2 class="section-title">Lectures and Notes</h2>
 	<h3 class="mt-4">Graduate School:</h3>
 
@@ -854,7 +862,7 @@
 		</div>
 	</div>
 
-	<a name="ADHM"></a>
+	<a id="ADHM"></a>
 	<div class="publication-card">
 		<div class="row">
 			<div class="col-12 col-sm-4 col-md-2">
@@ -876,8 +884,7 @@
 </div>
 
 <!-- *************** Mentoring ***************** -->
-<div class="container my-5">
-	<a name="mentoring"></a>
+<div id="mentoring" class="container my-5">
 	<h2 class="section-title">Mentoring</h2>
 
 
@@ -888,7 +895,7 @@
 			</div>
 			<div class="col-12 col-sm-8 col-md-10">
 				<h3>Brian Zhang - RSI</h3>
-				<p>I mentored Brian over the summer of 2024 as part of the <a href="https://www.cee.org/research-science-institute" target="_blank" rel="noopener noreferrer">Research Science Institute</a> (RSI) program at MIT. I worked with him through a directed reading course in the modern theory of deep learning, focusing on the ideas of the neural tangent kernel and maximal update parameterization. Brian performed a sweep over a highly important yet understudied hyperparamter known as the "richness" of a deep neural network. This parameter interpolates between the network behaving as a linear model and the network learning features. He absorbed a wealth of theoretical information and leveraged it to empirically probe the weight structure changes of deep netorks as the richness parameter is varied. These preliminary studies have the potential to open the black box of neural networks to simpler interpretation. His final report was among five selected as distinguished written papers. Brian is now an undergrad at MIT 🎉</p>
+				<p>I mentored Brian over the summer of 2024 as part of the <a href="https://www.cee.org/research-science-institute" target="_blank" rel="noopener noreferrer">Research Science Institute</a> (RSI) program at MIT. I worked with him through a directed reading course in the modern theory of deep learning, focusing on the ideas of the neural tangent kernel and maximal update parameterization. Brian performed a sweep over a highly important yet understudied hyperparameter known as the "richness" of a deep neural network. This parameter interpolates between the network behaving as a linear model and the network learning features. He absorbed a wealth of theoretical information and leveraged it to empirically probe the weight structure changes of deep networks as the richness parameter is varied. These preliminary studies have the potential to open the black box of neural networks to simpler interpretation. His final report was among five selected as distinguished written papers. Brian is now an undergrad at MIT 🎉</p>
 				<p><strong>(Summer 2024)</strong>
 					<a href="https://www.cee.org/sites/default/files/rsi/Papers/Zhang_Brian_Max_Final.pdf">[Final Paper]</a>
 				</p>
@@ -944,8 +951,7 @@
 </div>
 
 <!-- *************** Books ***************** -->
-<div class="container my-5">
-	<a name="books"></a>
+<div id="books" class="container my-5">
 	<h2 class="section-title">Books</h2>
 
 	<div class="publication-card">
