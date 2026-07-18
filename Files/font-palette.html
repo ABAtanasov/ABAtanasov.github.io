@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Header font palette</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&family=Space+Mono:wght@400;700&family=Courier+Prime:wght@400;700&family=Xanh+Mono&family=IBM+Plex+Mono:wght@400;500&family=STIX+Two+Text:wght@500;600&family=Playfair+Display:wght@500&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+	body { margin: 0; font-family: Inter, sans-serif; background: #f4f5f6; }
+	.intro { padding: 1.2rem 2rem 0.4rem; color: #333; }
+	h2 { margin: 2rem 2rem 0; font-size: 1.05rem; color: #222; }
+	.bar {
+		display: flex; align-items: center; justify-content: space-between;
+		background: rgba(16, 20, 24, 0.92); color: #fff;
+		padding: 0.55rem 2rem; margin: 0.9rem 1.5rem 0; border-radius: 8px;
+		border-bottom: 1px solid rgba(255,255,255,0.08);
+	}
+	.brand { font-size: 1.4rem; letter-spacing: 0.03em; }
+	.stix-brand { font-family: 'STIX Two Text', serif; font-size: 1.45rem; font-weight: 600; letter-spacing: 0.02em; }
+	.links { display: flex; gap: 1.1rem; font-size: 0.95rem; font-weight: 500; opacity: 0.95; }
+	.label { margin: 0.25rem 1.5rem 0; padding-left: 2rem; font-size: 0.8rem; color: #666; }
+	.label b { color: #222; }
+	.chosen { outline: 2px solid #3498db; outline-offset: 2px; }
+</style>
+</head>
+<body>
+<div class="intro"><b>Header type specimens</b> — decisions for abatanasov.com, July 2026.</div>
+
+<h2>Part 1 · Name wordmark (chosen: STIX Two Text 600)</h2>
+
+<div class="bar"><span class="brand" style="font-family: Optima, 'Segoe UI', sans-serif; font-weight:500;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>1 · Optima</b> (previous) — humanist glyphic, timeless, quietly classical. Mac-only; Windows sees Segoe UI.</div>
+
+<div class="bar"><span class="brand" style="font-family:'Space Mono', monospace; font-weight:700;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>2 · Space Mono 700</b> — slab-serif monospace. The fashionable "designer-terminal" wordmark; most personality per pixel.</div>
+
+<div class="bar"><span class="brand" style="font-family:'Space Mono', monospace; font-weight:400;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>3 · Space Mono 400</b> — same face, lighter; less logo, more label.</div>
+
+<div class="bar"><span class="brand" style="font-family:'Courier Prime', monospace; font-weight:700;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>4 · Courier Prime 700</b> — the refined typewriter (screenwriters' Courier). Literary, warm, manuscript-era.</div>
+
+<div class="bar"><span class="brand" style="font-family:'Xanh Mono', monospace;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>5 · Xanh Mono</b> — a true <i>serif</i> monospace. Airy, literary, genuinely unusual — the elegant end of the fixed-width spectrum.</div>
+
+<div class="bar"><span class="brand" style="font-family:'IBM Plex Mono', monospace; font-weight:500;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>6 · IBM Plex Mono 500</b> — the engineer's mono, no serifs. Included as the "pure terminal" control.</div>
+
+<div class="bar chosen"><span class="brand" style="font-family:'STIX Two Text', serif; font-weight:600;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>7 · STIX Two Text 600 — CHOSEN</b> — the physics-paper serif (arXiv's typographic world). Says "I write papers" without a monospace costume.</div>
+
+<div class="bar"><span class="brand" style="font-family:'Playfair Display', serif; font-weight:500;">Alex Atanasov</span>
+	<span class="links"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>8 · Playfair Display</b> — editorial/luxury; tried and rejected.</div>
+
+<h2>Part 2 · Nav links, paired with the STIX wordmark</h2>
+
+<div class="bar"><span class="stix-brand">Alex Atanasov</span>
+	<span class="links" style="font-family: Inter, sans-serif;"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>A · Inter 500</b> (current) — neutral modern sans. Clean but generic; no relationship to the wordmark.</div>
+
+<div class="bar"><span class="stix-brand">Alex Atanasov</span>
+	<span class="links" style="font-family:'STIX Two Text', serif; font-weight: 500; font-size: 1rem;"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>B · STIX Two Text 500</b> — full match. Unified, bookish; the whole bar becomes one typographic voice. Risk: can read old-fashioned.</div>
+
+<div class="bar"><span class="stix-brand">Alex Atanasov</span>
+	<span class="links" style="font-family:'STIX Two Text', serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.09em;"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>C · STIX caps, letterspaced</b> — the "engraved academic" nav: same family, small, uppercase, tracked out. Distinctive and disciplined; university-press energy.</div>
+
+<div class="bar"><span class="stix-brand">Alex Atanasov</span>
+	<span class="links" style="font-family:'Libre Franklin', sans-serif;"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>D · Libre Franklin 500</b> — the newspaper pairing: Franklin Gothic is the historic companion of Times-world serifs. Warmer than Inter, editorially literate.</div>
+
+<div class="bar"><span class="stix-brand">Alex Atanasov</span>
+	<span class="links" style="font-family:'IBM Plex Sans', sans-serif;"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>E · IBM Plex Sans 500</b> — technical humanist; quietly scientific without costume.</div>
+
+<div class="bar"><span class="stix-brand">Alex Atanasov</span>
+	<span class="links" style="font-family:'Source Sans 3', sans-serif;"><span>Resume</span><span>Papers</span><span>Lectures</span><span>Mentoring</span><span>Books</span><span>arXiv</span></span></div>
+<div class="label"><b>F · Source Sans 3 500</b> — designed specifically to sit beside serif text; the most self-effacing companion here.</div>
+
+<h2>Part 3 · Body font, judged by its italics (also sets paper titles)</h2>
+<style>
+	.body-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.1rem 1.5rem; margin: 0.9rem 1.5rem 0; color: #333; line-height: 1.6; }
+	.body-card h3 { margin: 0 0 0.5rem; font-size: 1.35rem; font-weight: 600; color: #2c3e50; font-family: inherit; }
+	.body-card p { margin: 0.3rem 0; font-size: 0.95rem; }
+	.body-card .venue { font-size: 0.9rem; }
+</style>
+
+<div class="body-card" style="font-family:'Source Sans 3', sans-serif;">
+	<h3>A Dynamical Model of Neural Scaling Laws</h3>
+	<p>My research is on developing a <b><i>science of deep learning</i></b> to inform the design of AI systems. I believe that <i>there will be a scientific theory of deep learning</i>, and I pursue this by leveraging statistical physics and random matrix theory.</p>
+	<p class="venue"><b>(2025) <i>Advances in Theoretical and Mathematical Physics; ICML 2025 Workshop on High-dimensional Learning Dynamics</i></b></p>
+</div>
+<div class="label"><b>i · Source Sans 3</b> (current) — true humanist italic: cursive-flavored letterforms. Warm, but italics announce themselves.</div>
+
+<div class="body-card chosen" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;">
+	<h3>A Dynamical Model of Neural Scaling Laws</h3>
+	<p>My research is on developing a <b><i>science of deep learning</i></b> to inform the design of AI systems. I believe that <i>there will be a scientific theory of deep learning</i>, and I pursue this by leveraging statistical physics and random matrix theory.</p>
+	<p class="venue"><b>(2025) <i>Advances in Theoretical and Mathematical Physics; ICML 2025 Workshop on High-dimensional Learning Dynamics</i></b></p>
+</div>
+<div class="label"><b>ii · Helvetica Neue — CHOSEN</b> (the original) — pure oblique: same letters, slanted. The italic behavior you were used to. Mac-only rendering shown.</div>
+
+<div class="body-card" style="font-family:'Inter', sans-serif;">
+	<h3>A Dynamical Model of Neural Scaling Laws</h3>
+	<p>My research is on developing a <b><i>science of deep learning</i></b> to inform the design of AI systems. I believe that <i>there will be a scientific theory of deep learning</i>, and I pursue this by leveraging statistical physics and random matrix theory.</p>
+	<p class="venue"><b>(2025) <i>Advances in Theoretical and Mathematical Physics; ICML 2025 Workshop on High-dimensional Learning Dynamics</i></b></p>
+</div>
+<div class="label"><b>iii · Inter</b> — near-oblique italic, very close to Helvetica's behavior, but a webfont (identical on every OS).</div>
+
+<div class="body-card" style="font-family:'IBM Plex Sans', sans-serif;">
+	<h3>A Dynamical Model of Neural Scaling Laws</h3>
+	<p>My research is on developing a <b><i>science of deep learning</i></b> to inform the design of AI systems. I believe that <i>there will be a scientific theory of deep learning</i>, and I pursue this by leveraging statistical physics and random matrix theory.</p>
+	<p class="venue"><b>(2025) <i>Advances in Theoretical and Mathematical Physics; ICML 2025 Workshop on High-dimensional Learning Dynamics</i></b></p>
+</div>
+<div class="label"><b>iv · IBM Plex Sans</b> — true italic but disciplined; the middle ground. Technical-humanist character overall.</div>
+
+<div class="body-card" style="font-family:'Libre Franklin', sans-serif;">
+	<h3>A Dynamical Model of Neural Scaling Laws</h3>
+	<p>My research is on developing a <b><i>science of deep learning</i></b> to inform the design of AI systems. I believe that <i>there will be a scientific theory of deep learning</i>, and I pursue this by leveraging statistical physics and random matrix theory.</p>
+	<p class="venue"><b>(2025) <i>Advances in Theoretical and Mathematical Physics; ICML 2025 Workshop on High-dimensional Learning Dynamics</i></b></p>
+</div>
+<div class="label"><b>v · Libre Franklin</b> — plain-slant italic, newspaper-gothic warmth; the serif-history pairing.</div>
+
+<div class="body-card" style="font-family:'Public Sans', sans-serif;">
+	<h3>A Dynamical Model of Neural Scaling Laws</h3>
+	<p>My research is on developing a <b><i>science of deep learning</i></b> to inform the design of AI systems. I believe that <i>there will be a scientific theory of deep learning</i>, and I pursue this by leveraging statistical physics and random matrix theory.</p>
+	<p class="venue"><b>(2025) <i>Advances in Theoretical and Mathematical Physics; ICML 2025 Workshop on High-dimensional Learning Dynamics</i></b></p>
+</div>
+<div class="label"><b>vi · Public Sans</b> — neutral civic sans (US gov design system); italic is a restrained slant, nothing performs.</div>
+
+</body>
+</html>

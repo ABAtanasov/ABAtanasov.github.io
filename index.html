@@ -53,7 +53,7 @@
 		<!-- Font Awesome 6 -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=STIX+Two+Text:wght@500;600&display=swap" rel="stylesheet">
 		<style type="text/css">
 		:root {
 			--primary-color: #2c3e50;
@@ -87,41 +87,65 @@
 
 		.hero-section {
 		    position: relative;
-		    background: url("Files/LandScape.JPG");
+		    background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0) 30%), url("Files/LandScape.JPG");
 		    background-size: cover;
 		    background-position: center;
-		    color: #fff;
-		    padding: 350px 0 300px;
+		    height: 68vh;
+		    min-height: 420px;
 		    margin-bottom: 0;
 		}
 
-		.hero-section h1 {
-			font-family: Optima, 'Segoe UI', sans-serif;
-			font-weight: 400;
-			font-size: 3.5rem;
-			margin-bottom: 0.5rem;
-			color: #dd0000;
-			text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-		}
-
-		.hero-section .lead {
-			font-size: 1.3rem;
-			font-weight: 300;
-			opacity: 0.95;
-		}
-
 		.navbar {
-			background: var(--navbar-bg) !important;
-			backdrop-filter: blur(10px);
-			box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-			padding: 0.56rem 0;
-			transition: background-color 0.3s ease;
+			background: transparent !important;
+			border-bottom: 1px solid transparent;
+			padding: 0.5rem 0;
+			transition: background-color 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+		}
+
+		.navbar.scrolled {
+			background: rgba(16, 20, 24, 0.72) !important;
+			backdrop-filter: blur(16px) saturate(160%);
+			-webkit-backdrop-filter: blur(16px) saturate(160%);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 		}
 
 		.navbar-brand, .nav-link {
 			color: var(--navbar-text) !important;
 			font-weight: 500;
 			transition: color 0.3s ease;
+		}
+
+		.navbar-brand {
+			font-family: 'STIX Two Text', 'Times New Roman', serif;
+			font-size: 1.45rem;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+		}
+
+		.navbar-nav {
+			gap: 0.15rem;
+		}
+
+		.nav-link {
+			padding: 0.35rem 0.75rem !important;
+			border-radius: 6px;
+			font-size: 0.95rem;
+			text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+		}
+
+		.nav-link:hover {
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.navbar .navbar-collapse.show,
+		.navbar .navbar-collapse.collapsing {
+			background: rgba(16, 20, 24, 0.92);
+			backdrop-filter: blur(16px);
+			-webkit-backdrop-filter: blur(16px);
+			border-radius: 10px;
+			padding: 0.5rem 1rem;
+			margin-top: 0.5rem;
 		}
 
 		.nav-link:hover {
@@ -137,6 +161,7 @@
 		}
 
 		.section-title {
+			font-family: 'Source Serif 4', Georgia, serif;
 			font-weight: 700;
 			color: var(--section-title);
 			margin-bottom: 2rem;
@@ -212,11 +237,8 @@
 		/* Mobile responsive hero */
 		@media (max-width: 768px) {
 			.hero-section {
-				padding: 150px 0 120px;
-			}
-
-			.hero-section h1 {
-				font-size: 2.5rem;
+				height: 45vh;
+				min-height: 280px;
 			}
 
 			.publication-card img {
@@ -238,18 +260,18 @@
 <!-- ********************** Navbar ******************* -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
 	<div class="container">
-		<a class="navbar-brand" href="#about"><i class="fa-solid fa-house"></i></a>
+		<a class="navbar-brand" href="#">Alex Atanasov</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ms-auto">
-				<li class="nav-item"><a class="nav-link" href="Files/Resume 2026.pdf"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
-				<li class="nav-item"><a class="nav-link" href="#papers"><i class="fa-solid fa-file"></i> Papers</a></li>
-				<li class="nav-item"><a class="nav-link" href="#lectures"><i class="fa-solid fa-pencil"></i> Lectures</a></li>
-				<li class="nav-item"><a class="nav-link" href="#mentoring"><i class="fa-solid fa-user-graduate"></i> Mentoring</a></li>
-				<li class="nav-item"><a class="nav-link" href="#books"><i class="fa-solid fa-book"></i> Books</a></li>
-				<li class="nav-item"><a class="nav-link" href="https://arxiv.org/a/atanasov_a_1.html"><i class="fa-solid fa-file-pdf"></i> arXiv</a></li>
+				<li class="nav-item"><a class="nav-link" href="Files/Resume 2026.pdf">Resume</a></li>
+				<li class="nav-item"><a class="nav-link" href="#papers">Papers</a></li>
+				<li class="nav-item"><a class="nav-link" href="#lectures">Lectures</a></li>
+				<li class="nav-item"><a class="nav-link" href="#mentoring">Mentoring</a></li>
+				<li class="nav-item"><a class="nav-link" href="#books">Books</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://arxiv.org/a/atanasov_a_1.html">arXiv</a></li>
 				<li class="nav-item"><a class="nav-link" href="https://github.com/abatanasov"><i class="fa-brands fa-github"></i></a></li>
 				<li class="nav-item"><a class="nav-link" href="http://linkedin.com/in/alexatanasov"><i class="fa-brands fa-linkedin"></i></a></li>
 			</ul>
@@ -259,9 +281,7 @@
 
 <!-- *************** Hero Section ***************** -->
 <header class="hero-section">
-	<div class="container text-center">
-		<h1>Alex Atanasov</h1>
-	</div>
+	<h1 class="visually-hidden">Alex Atanasov</h1>
 </header>
 
 <main>
@@ -993,5 +1013,13 @@
 
 <!-- Bootstrap 5 JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+	(function () {
+		const navbar = document.querySelector('.navbar');
+		const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 40);
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+	})();
+</script>
 </body>
 </html>
